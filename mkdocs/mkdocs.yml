@@ -1,11 +1,11 @@
 # Project information
 site_name: 'User Documentation'
 site_description: 'Projeto Integrador Fatec SP Visionna user documentation'
-site_url: 'https://projeto-integrador-fatec.github.io'
+site_url: 'https://projetointegradoradsfatec.github.io/pi-docs/'
 
 # Repository
 repo_name: 'docs-pi'
-repo_url: 'https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-fatec.github.io'
+repo_url: 'https://github.com/ProjetoIntegradorADSFatec/pi-docs'
 
 # Copyright
 copyright: 'Copyright &copy; 2020 Fatec SP.'
