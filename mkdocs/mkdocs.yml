@@ -1,0 +1,25 @@
+# Project information
+site_name: 'User Documentation'
+site_description: 'Projeto Integrador Fatec SP Visionna user documentation'
+site_url: 'https://projeto-integrador-fatec.github.io'
+
+# Repository
+repo_name: 'docs-pi'
+repo_url: 'https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-fatec.github.io'
+
+# Copyright
+copyright: 'Copyright &copy; 2020 Fatec SP.'
+
+# Configuration
+nav:
+  - Home: 'index.md'
+  - API-Restful: 'api-restful/index.md'
+  - Web-GIS: 'web-gis/index.md'
+
+# Extensions
+markdown_extensions:
+  - admonition
+  - codehilite:
+      guess_lang: false
+  - toc:
+      permalink: true
