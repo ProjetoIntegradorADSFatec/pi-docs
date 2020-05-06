@@ -53,7 +53,7 @@ Para a implementação será necessário a utilização das seguintes tecnologia
 - [API](https://github.com/ProjetoIntegradorADSFatec/api-restful) - intermédio para a base de dados e o sistema Web GIS;
 - [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis) - visualização do resultado final;
 
-## Documentação:
+## Documentação
 
 - [Termo de Abertura de Projeto](https://drive.google.com/file/d/1nnV2h9FB3pbM5EfAqz9798ZM5i5_dByI/view?usp=sharing)
 - [Diagrama de Tempo e Custo](https://drive.google.com/file/d/1wMbgBH2JSWBZ-Wwjd0vlBqT1y6fgaFn_/view?usp=sharing)
