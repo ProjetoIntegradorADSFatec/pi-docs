@@ -13,8 +13,12 @@ copyright: 'Copyright &copy; 2020 Fatec SP.'
 # Configuration
 nav:
   - Home: 'index.md'
-  - API-Restful: 'api-restful/index.md'
+  - API-Restful:
+    - About: 'api-restful/index.md'
+    - Geoserver: 'api-restful/geoserver/index.md'
+    - Data Base: 'api-restful/bd/index.md'
   - Web-GIS: 'web-gis/index.md'
+  - Sistema Inteligente: 'python-cnn/index.md'
 
 # Extensions
 markdown_extensions:

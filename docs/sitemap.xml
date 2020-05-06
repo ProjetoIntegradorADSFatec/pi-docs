@@ -1,15 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"><url>
-     <loc>https://projeto-integrador-fatec.github.io/</loc>
-     <lastmod>2020-03-27</lastmod>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/</loc>
+     <lastmod>2020-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://projeto-integrador-fatec.github.io/api-restful/</loc>
-     <lastmod>2020-03-27</lastmod>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/api-restful/</loc>
+     <lastmod>2020-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url><url>
-     <loc>https://projeto-integrador-fatec.github.io/web-gis/</loc>
-     <lastmod>2020-03-27</lastmod>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/api-restful/geoserver/</loc>
+     <lastmod>2020-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/api-restful/bd/</loc>
+     <lastmod>2020-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/web-gis/</loc>
+     <lastmod>2020-05-06</lastmod>
+     <changefreq>daily</changefreq>
+    </url><url>
+     <loc>https://projetointegradoradsfatec.github.io/pi-docs/python-cnn/</loc>
+     <lastmod>2020-05-06</lastmod>
      <changefreq>daily</changefreq>
     </url>
 </urlset>

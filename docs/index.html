@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         <meta name="description" content="Projeto Integrador Fatec SP Visionna user documentation">
         
-        <link rel="canonical" href="https://projeto-integrador-fatec.github.io/">
+        <link rel="canonical" href="https://projetointegradoradsfatec.github.io/pi-docs/">
         <link rel="shortcut icon" href="img/favicon.ico">
         <title>User Documentation</title>
         <link href="css/bootstrap.min.css" rel="stylesheet">
@@ -36,11 +36,28 @@
                             <li class="navitem active">
                                 <a href="." class="nav-link">Home</a>
                             </li>
-                            <li class="navitem">
-                                <a href="api-restful/" class="nav-link">API-Restful</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API-Restful <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="api-restful/" class="dropdown-item">About</a>
+</li>
+                                    
+<li>
+    <a href="api-restful/geoserver/" class="dropdown-item">Geoserver</a>
+</li>
+                                    
+<li>
+    <a href="api-restful/bd/" class="dropdown-item">Data Base</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem">
                                 <a href="web-gis/" class="nav-link">Web-GIS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="python-cnn/" class="nav-link">Sistema Inteligente</a>
                             </li>
                         </ul>
 
@@ -61,7 +78,7 @@
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-fatec.github.io/edit/master/docs/index.md" class="nav-link">Edit on docs-pi</a>
+                                <a href="https://github.com/ProjetoIntegradorADSFatec/pi-docs/edit/master/docs/index.md" class="nav-link">Edit on docs-pi</a>
                             </li>
                     </ul>
                 </div>
@@ -83,19 +100,15 @@
             
             <li class="nav-item" data-level="1"><a href="#projeto-integrador-ads-fatec" class="nav-link">Projeto Integrador ADS Fatec</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#integrantes-do-grupo" class="nav-link">Integrantes do Grupo:</a>
+            <li class="nav-item" data-level="2"><a href="#integrantes-do-grupo" class="nav-link">Integrantes do Grupo</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#solucao" class="nav-link">Solução:</a>
+            <li class="nav-item" data-level="2"><a href="#solucao" class="nav-link">Solução</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#implementacao" class="nav-link">Implementação:</a>
-              <ul class="nav flex-column">
-              </ul>
-            </li>
-            <li class="nav-item" data-level="2"><a href="#componentes" class="nav-link">Componentes:</a>
+            <li class="nav-item" data-level="2"><a href="#componentes" class="nav-link">Componentes</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -109,42 +122,36 @@
 <h1 id="projeto-integrador-ads-fatec">Projeto Integrador ADS Fatec<a class="headerlink" href="#projeto-integrador-ads-fatec" title="Permanent link">&para;</a></h1>
 <p><a href="https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-ads-fatec/blob/master/LICENSE"><img alt="License: CC BY 4.0" src="https://img.shields.io/badge/license-MIT-green" /></a></p>
 <p>Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa <a href="http://www.visionaespacial.com.br/">Visiona</a> para a identificação de talhões (unidade mínima de cultivo de uma propriedade com características em comum). Link Oficial para o projeto <a href="https://github.com/ProjetoIntegradorADSFatec">Github</a>.</p>
-<h2 id="integrantes-do-grupo">Integrantes do Grupo:<a class="headerlink" href="#integrantes-do-grupo" title="Permanent link">&para;</a></h2>
+<h2 id="integrantes-do-grupo">Integrantes do Grupo<a class="headerlink" href="#integrantes-do-grupo" title="Permanent link">&para;</a></h2>
 <ul>
-<li>Abner Ernâni dos Anjos (Scrum Master - SM)</li>
+<li>Tábata Glória (Scrum Master - SM)</li>
 <li>Joâo de Freitas (Project Owner - PO)</li>
 <li>Guilherme Gomes (Back end Developer - DEV)</li>
 <li>João Arruda (Front end Developer - DEV)</li>
-<li>Tábata Glória (Front end Developer - DEV)</li>
+<li>Abner Ernâni dos Anjos (Full Stack Developer - DEV)</li>
 </ul>
-<h2 id="solucao">Solução:<a class="headerlink" href="#solucao" title="Permanent link">&para;</a></h2>
+<h2 id="solucao">Solução<a class="headerlink" href="#solucao" title="Permanent link">&para;</a></h2>
 <p>Desenvolver um Sistema Web Gis - Sistema de informação Geográfico - com uma interface gráfica agradável ao usuário e de fácil utilização e intuitiva, com uma área de visualização de imagens do mapa, conforme a região e o período de tempo selecionados pelo usuário, permitindo a manipulação da imagem (aumentar ou diminuir e demarcação) e permitir o download desse arquivo para armazenamento.</p>
-<h2 id="implementacao">Implementação:<a class="headerlink" href="#implementacao" title="Permanent link">&para;</a></h2>
+<h4 id="implementacao">Implementação<a class="headerlink" href="#implementacao" title="Permanent link">&para;</a></h4>
 <p>Como implementar? Tecnologias. Plataformas. Ferramentas.</p>
 <p>Para a implementação será necessário a utilização das seguintes tecnologias:</p>
-<h3 id="landsat-8-api">Landsat-8 API<a class="headerlink" href="#landsat-8-api" title="Permanent link">&para;</a></h3>
-<p>Satélite de satélite de observação da Terra, esses dados das imagens  podem ser usados facilmente com qualquer software que reconheça arquivos GeoTIFF através de um arquivo CSV de índice dos dados do Landsat.</p>
-<h3 id="sentinel-2-api">Sentinel-2 API<a class="headerlink" href="#sentinel-2-api" title="Permanent link">&para;</a></h3>
-<p>É uma constelação de dois satélites de observação da Terra SEUS Os dados são ideais para aplicativos de agricultura, silvicultura e outros tipos de administração de terra. esse conjunto de dados está disponível gratuitamente no programa Google Public Cloud Data.</p>
-<h3 id="geo-server">Geo Server<a class="headerlink" href="#geo-server" title="Permanent link">&para;</a></h3>
-<p>É um servidor de código aberto escrito em Java que permite aos usuários compartilhar, processar e editar dados geoespaciais. Projetado para interoperabilidade, publica dados de qualquer fonte de dados espaciais importantes usando padrões abertos.</p>
-<h3 id="postgresql">PostgreSQL<a class="headerlink" href="#postgresql" title="Permanent link">&para;</a></h3>
-<p>É um sistema de gerenciamento de banco de dados objeto-relacional (SGBDOR) baseado no POSTGRES Versão 4.2.</p>
-<h3 id="spring-boot">Spring Boot<a class="headerlink" href="#spring-boot" title="Permanent link">&para;</a></h3>
-<p>Projeto da Spring que veio para facilitar o processo de configuração e publicação de aplicações. Pode-se escolher os módulos que precisa através dos starters que inclui no pom.xml do projeto. Basicamente, são dependências que agrupam outras dependências.</p>
-<h3 id="angular">Angular<a class="headerlink" href="#angular" title="Permanent link">&para;</a></h3>
-<p>É uma estrutura de design de aplicativo e plataforma de desenvolvimento para criar aplicativos de página única eficientes e sofisticados.</p>
-<h3 id="java">Java<a class="headerlink" href="#java" title="Permanent link">&para;</a></h3>
-<p>É uma linguagem de programação orientada a objetos que é amplamente usada para o desenvolvimento de sites e aplicativos. Permite o desenvolvimento de programas multiplataforma, que podem ser executados em qualquer dispositivo.</p>
-<h3 id="python">Python<a class="headerlink" href="#python" title="Permanent link">&para;</a></h3>
-<p>É uma linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte, para a implementação da inteligencia artificial.</p>
-<h3 id="git-hub">Git Hub<a class="headerlink" href="#git-hub" title="Permanent link">&para;</a></h3>
-<p>Sistema de controle de versão distribuido e gerenciamento de código-fonte, fornece controle de acesso e vários recursos de colaboração, como rastreamento de erros, solicitações de recursos, gerenciamento de tarefas e wikis para cada projeto.</p>
-<h3 id="microsoft-team">Microsoft TEAM<a class="headerlink" href="#microsoft-team" title="Permanent link">&para;</a></h3>
-<p>Trata-se de um aplicativo de bate-papo em grupo que permite o gerenciamento de diversas conversas em um único ambiente de controle. Foi desenvolvido para facilitar a comunicação e promover a colaboração entre as equipes da empresa/projeto.</p>
-<h2 id="componentes">Componentes:<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Landsat-8 API:</strong> satélite de observação da Terra, esses dados das imagens  podem ser usados facilmente com qualquer software que reconheça arquivos GeoTIFF através de um arquivo CSV de índice dos dados do Landsat.</p>
+<p><strong>Sentinel-2 API:</strong> constelação de dois satélites de observação da Terra SEUS Os dados são ideais para aplicativos de agricultura, silvicultura e outros tipos de administração de terra. esse conjunto de dados está disponível gratuitamente no programa Google Public Cloud Data.</p>
+<p><strong>Geo Server:</strong> servidor de código aberto escrito em Java que permite aos usuários compartilhar, processar e editar dados geoespaciais. Projetado para interoperabilidade, publica dados de qualquer fonte de dados espaciais importantes usando padrões abertos.</p>
+<p><strong>PostgreSQL:</strong> sistema de gerenciamento de banco de dados objeto-relacional (SGBDOR) baseado no POSTGRES Versão 4.2.</p>
+<p><strong>Spring Boot:</strong> facilitar o processo de configuração e publicação de aplicações. Pode-se escolher os módulos que precisa através dos starters que inclui no pom.xml do projeto. Basicamente, são dependências que agrupam outras dependências.</p>
+<p><strong>Angular:</strong> estrutura de design de aplicativo e plataforma de desenvolvimento para criar aplicativos de página única eficientes e sofisticados.</p>
+<p><strong>Java:</strong> linguagem de programação orientada a objetos que é amplamente usada para o desenvolvimento de sites e aplicativos. Permite o desenvolvimento de programas multiplataforma, que podem ser executados em qualquer dispositivo.</p>
+<p><strong>Python:</strong> linguagem de programação de alto nível, interpretada, de script, imperativa, orientada a objetos, funcional, de tipagem dinâmica e forte, para a implementação da inteligencia artificial.</p>
+<p><strong>Conda Environment:</strong> gerenciador de ambientes virtuais para a linguagem python.</p>
+<p><strong>Mkdocs:</strong> gerador de documentação baseado na linguagem python.</p>
+<p><strong>Github:</strong> Sistema de controle de versão distribuido e gerenciamento de código-fonte, fornece controle de acesso e vários recursos de colaboração, como rastreamento de erros, solicitações de recursos, gerenciamento de tarefas e wikis para cada projeto.</p>
+<p><strong>Microsoft TEAM:</strong> Trata-se de um aplicativo de bate-papo em grupo que permite o gerenciamento de diversas conversas em um único ambiente de controle. Foi desenvolvido para facilitar a comunicação e promover a colaboração entre as equipes da empresa/projeto.</p>
+</blockquote>
+<h2 id="componentes">Componentes<a class="headerlink" href="#componentes" title="Permanent link">&para;</a></h2>
 <ul>
-<li><a href="https://github.com/ProjetoIntegradorADSFatec">Sistema Inteligente</a> - construção da base de dados a ser consumida;</li>
+<li><a href="https://github.com/ProjetoIntegradorADSFatec/python-cnn">Sistema Inteligente</a> - construção da base de dados a ser consumida;</li>
 <li><a href="https://github.com/ProjetoIntegradorADSFatec/api-restful">API</a> - intermédio para a base de dados e o sistema Web GIS;</li>
 <li><a href="https://github.com/ProjetoIntegradorADSFatec/web-gis">Sistema Web GIS</a> - visualização do resultado final;</li>
 </ul></div>
@@ -158,7 +165,7 @@
         </footer>
         <script>
             var base_url = ".",
-                shortcuts = {"previous": 80, "help": 191, "next": 78, "search": 83};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="js/base.js" defer></script>
         <script src="search/main.js" defer></script>
@@ -232,5 +239,5 @@
 
 <!--
 MkDocs version : 1.1
-Build Date UTC : 2020-03-27 14:11:03
+Build Date UTC : 2020-05-06 23:22:04
 -->

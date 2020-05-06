@@ -6,7 +6,7 @@
         <meta name="viewport" content="width=device-width, initial-scale=1.0">
         
         
-        <link rel="canonical" href="https://projeto-integrador-fatec.github.io/web-gis/">
+        <link rel="canonical" href="https://projetointegradoradsfatec.github.io/pi-docs/web-gis/">
         <link rel="shortcut icon" href="../img/favicon.ico">
         <title>Web-GIS - User Documentation</title>
         <link href="../css/bootstrap.min.css" rel="stylesheet">
@@ -36,11 +36,28 @@
                             <li class="navitem">
                                 <a href=".." class="nav-link">Home</a>
                             </li>
-                            <li class="navitem">
-                                <a href="../api-restful/" class="nav-link">API-Restful</a>
+                            <li class="dropdown">
+                                <a href="#" class="nav-link dropdown-toggle" data-toggle="dropdown">API-Restful <b class="caret"></b></a>
+                                <ul class="dropdown-menu">
+                                    
+<li>
+    <a href="../api-restful/" class="dropdown-item">About</a>
+</li>
+                                    
+<li>
+    <a href="../api-restful/geoserver/" class="dropdown-item">Geoserver</a>
+</li>
+                                    
+<li>
+    <a href="../api-restful/bd/" class="dropdown-item">Data Base</a>
+</li>
+                                </ul>
                             </li>
                             <li class="navitem active">
                                 <a href="./" class="nav-link">Web-GIS</a>
+                            </li>
+                            <li class="navitem">
+                                <a href="../python-cnn/" class="nav-link">Sistema Inteligente</a>
                             </li>
                         </ul>
 
@@ -51,17 +68,17 @@
                             </a>
                         </li>
                             <li class="nav-item">
-                                <a rel="prev" href="../api-restful/" class="nav-link">
+                                <a rel="prev" href="../api-restful/bd/" class="nav-link">
                                     <i class="fa fa-arrow-left"></i> Previous
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a rel="next" class="nav-link disabled">
+                                <a rel="next" href="../python-cnn/" class="nav-link">
                                     Next <i class="fa fa-arrow-right"></i>
                                 </a>
                             </li>
                             <li class="nav-item">
-                                <a href="https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-fatec.github.io/edit/master/docs/web-gis/index.md" class="nav-link">Edit on docs-pi</a>
+                                <a href="https://github.com/ProjetoIntegradorADSFatec/pi-docs/edit/master/docs/web-gis/index.md" class="nav-link">Edit on docs-pi</a>
                             </li>
                     </ul>
                 </div>
@@ -83,27 +100,31 @@
             
             <li class="nav-item" data-level="1"><a href="#web-gis" class="nav-link">Web GIS</a>
               <ul class="nav flex-column">
-            <li class="nav-item" data-level="2"><a href="#development-server" class="nav-link">Development server</a>
+            <li class="nav-item" data-level="2"><a href="#execucao-para-o-ambiente-de-micro-servicos-em-docker" class="nav-link">Execução para o ambiente de micro serviços em Docker</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#code-scaffolding" class="nav-link">Code scaffolding</a>
+            <li class="nav-item" data-level="2"><a href="#servidor-para-o-ambiente-de-desenvolvimento" class="nav-link">Servidor para o ambiente de desenvolvimento</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#build" class="nav-link">Build</a>
+            <li class="nav-item" data-level="2"><a href="#desenvolvimento-de-codigo" class="nav-link">Desenvolvimento de código</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#running-unit-tests" class="nav-link">Running unit tests</a>
+            <li class="nav-item" data-level="2"><a href="#gerando-pacotes-html" class="nav-link">Gerando pacotes HTML</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#running-end-to-end-tests" class="nav-link">Running end-to-end tests</a>
+            <li class="nav-item" data-level="2"><a href="#testes-unitarios" class="nav-link">Testes Unitários</a>
               <ul class="nav flex-column">
               </ul>
             </li>
-            <li class="nav-item" data-level="2"><a href="#further-help" class="nav-link">Further help</a>
+            <li class="nav-item" data-level="2"><a href="#executando-testes-end-to-end" class="nav-link">Executando testes end-to-end</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            <li class="nav-item" data-level="2"><a href="#ajuda-faq" class="nav-link">Ajuda FAQ</a>
               <ul class="nav flex-column">
               </ul>
             </li>
@@ -115,20 +136,56 @@
                     <div class="col-md-9" role="main">
 
 <h1 id="web-gis">Web GIS<a class="headerlink" href="#web-gis" title="Permanent link">&para;</a></h1>
-<p>Sistema Web GIS para a visualização de talhões com dados espaço-temporais.
-This project was generated with <a href="https://github.com/angular/angular-cli">Angular CLI</a> latest</p>
-<h2 id="development-server">Development server<a class="headerlink" href="#development-server" title="Permanent link">&para;</a></h2>
-<p>Run <code>ng serve</code> for a dev server. Navigate to <code>http://localhost:4200/</code>. The app will automatically reload if you change any of the source files.</p>
-<h2 id="code-scaffolding">Code scaffolding<a class="headerlink" href="#code-scaffolding" title="Permanent link">&para;</a></h2>
-<p>Run <code>ng generate component component-name</code> to generate a new component. You can also use <code>ng generate directive|pipe|service|class|guard|interface|enum|module</code>.</p>
-<h2 id="build">Build<a class="headerlink" href="#build" title="Permanent link">&para;</a></h2>
-<p>Run <code>ng build</code> to build the project. The build artifacts will be stored in the <code>dist/</code> directory. Use the <code>--prod</code> flag for a production build.</p>
-<h2 id="running-unit-tests">Running unit tests<a class="headerlink" href="#running-unit-tests" title="Permanent link">&para;</a></h2>
-<p>Run <code>ng test</code> to execute the unit tests via <a href="https://karma-runner.github.io">Karma</a>.</p>
-<h2 id="running-end-to-end-tests">Running end-to-end tests<a class="headerlink" href="#running-end-to-end-tests" title="Permanent link">&para;</a></h2>
-<p>Run <code>ng e2e</code> to execute the end-to-end tests via <a href="http://www.protractortest.org/">Protractor</a>.</p>
-<h2 id="further-help">Further help<a class="headerlink" href="#further-help" title="Permanent link">&para;</a></h2>
-<p>To get more help on the Angular CLI use <code>ng help</code> or go check out the <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a>.</p></div>
+<p><a href="https://www.docker.com/"><img alt="Docker" src="https://img.shields.io/badge/docker-latest-green" /></a>
+<a href="https://nodejs.org/en/"><img alt="NodeJS" src="https://img.shields.io/badge/node-12-green" /></a>
+<a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/typescript-latest-green" /></a>
+<a href="https://angular.io/"><img alt="Angular" src="https://img.shields.io/badge/angular-7.2.2-green" /></a>
+<a href="https://openlayers.org/"><img alt="Openlayers" src="https://img.shields.io/badge/openlayers-6.3.1-green" /></a></p>
+<p>Sistema Web GIS para a visualização de talhões com dados espaço-temporais, permitindo o recorte e buscas de áreas de interesse por extensivo uso da biblioteca <a href="https://openlayers.org/"><em>Openlayers</em></a>.</p>
+<p>Para a execução desta aplicação ao é necessário ter o projeto <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful">API Restful</a> em execução utilizando Docker ou o ambiente de desenvolvimento.</p>
+<h2 id="execucao-para-o-ambiente-de-micro-servicos-em-docker">Execução para o ambiente de micro serviços em Docker<a class="headerlink" href="#execucao-para-o-ambiente-de-micro-servicos-em-docker" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Obs.:</strong> Necessária instalação do <em>Node 10+</em> e <em>Angular CLI 9+</em>, não esqueça de modificar o ip do serviço de cache em <code>app/services/cache-system.ts</code>.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>##  Construir o pacote HTML para a execução do http-server
+$ ng build
+
+## Copie o arquivo Dockerfile para o pacote recém-gerado
+$ cp Dockerfile dist/web-gis &amp;&amp; cd dist/web-gis
+</code></pre></div>
+
+
+<blockquote>
+<p>Para a execução do ambiente em docker execute os seguintes comandos:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>## Crie uma imagem para a execução do container
+$ docker build -t web-gis:latest .
+
+## Fica a criterio do usuario criar um volume para armazenar os dados
+$ docker container run --name app-smh-ui -p 8082:8080 -d web-gis:latest
+</code></pre></div>
+
+
+<blockquote>
+<p>Abaixo se encontra a aplicação em funcionamento utilizando os passos anteriores:</p>
+</blockquote>
+<p align = "center">
+  <img src = "../assets/web-gis.gif">
+</p>
+
+<p>Este projeto foi gerado utilizando <a href="https://github.com/angular/angular-cli">Angular CLI</a> versão 9+.</p>
+<h2 id="servidor-para-o-ambiente-de-desenvolvimento">Servidor para o ambiente de desenvolvimento<a class="headerlink" href="#servidor-para-o-ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h2>
+<p>Executar o seguinte comando <code>ng serve</code> para executar um novo servidor de desenvolvimento. No navegador procure pelo endereço <code>http://localhost:4200/</code>. A aplicação irá realizar a leitura automática de arquivos em conjunto com as alterações implementadas.</p>
+<h2 id="desenvolvimento-de-codigo">Desenvolvimento de código<a class="headerlink" href="#desenvolvimento-de-codigo" title="Permanent link">&para;</a></h2>
+<p>Executar o seguinte comando <code>ng generate component component-name</code> para gerar um novo componente em Linguagem <strong>TypeScript</strong>.</p>
+<h2 id="gerando-pacotes-html">Gerando pacotes <em>HTML</em><a class="headerlink" href="#gerando-pacotes-html" title="Permanent link">&para;</a></h2>
+<p>Execute o seguinte comando <code>ng build</code> para gerar o pacote <em>HTML</em> para a execução. Use o comando <code>--prod</code> <strong>tag</strong> para o ambiente de produção.</p>
+<h2 id="testes-unitarios">Testes Unitários<a class="headerlink" href="#testes-unitarios" title="Permanent link">&para;</a></h2>
+<p>Execute <code>ng test</code> para executar os testes unitários via <a href="https://karma-runner.github.io">Karma</a>.</p>
+<h2 id="executando-testes-end-to-end">Executando testes <em>end-to-end</em><a class="headerlink" href="#executando-testes-end-to-end" title="Permanent link">&para;</a></h2>
+<p>Execute <code>ng e2e</code> para executar o testes <em>end-to-end</em> via <a href="http://www.protractortest.org/">Protractor</a></p>
+<h2 id="ajuda-faq">Ajuda FAQ<a class="headerlink" href="#ajuda-faq" title="Permanent link">&para;</a></h2>
+<p>Para maisinformações sobre a usabilidade da interface de linha de comando use <code>ng help</code> ou dê uma olhada <a href="https://github.com/angular/angular-cli/blob/master/README.md">Angular CLI README</a> .</p></div>
             </div>
         </div>
 
@@ -139,7 +196,7 @@ This project was generated with <a href="https://github.com/angular/angular-cli"
         </footer>
         <script>
             var base_url = "..",
-                shortcuts = {"previous": 80, "help": 191, "next": 78, "search": 83};
+                shortcuts = {"help": 191, "next": 78, "previous": 80, "search": 83};
         </script>
         <script src="../js/base.js" defer></script>
         <script src="../search/main.js" defer></script>
