@@ -52,3 +52,10 @@ Para a implementação será necessário a utilização das seguintes tecnologia
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn) - construção da base de dados a ser consumida;
 - [API](https://github.com/ProjetoIntegradorADSFatec/api-restful) - intermédio para a base de dados e o sistema Web GIS;
 - [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis) - visualização do resultado final;
+
+## Documentação:
+
+- [Termo de Abertura de Projeto](https://drive.google.com/file/d/1nnV2h9FB3pbM5EfAqz9798ZM5i5_dByI/view?usp=sharing)
+- [Diagrama de Tempo e Custo](https://drive.google.com/file/d/1wMbgBH2JSWBZ-Wwjd0vlBqT1y6fgaFn_/view?usp=sharing)
+- [Declaração de escopo](https://drive.google.com/file/d/1hmpUrkC_63x_zu5t5hC8l96A9VVje4mf/view?usp=sharing)
+- [Design Thinking](https://drive.google.com/file/d/1RSSCUZSfVPDrsy4MWIIZzh7bvLL_jkMS/view?usp=sharing)
