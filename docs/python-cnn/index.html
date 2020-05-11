@@ -142,7 +142,7 @@ usuários do Web GIS visualizem e naveguem pelas imagens sem precisar baixá-las
 <p><strong>Obs.:</strong> Instalação do Miniconda é necessária para a execução dos comandos a seguir.</p>
 <h3 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento<a class="headerlink" href="#ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code># Crie um novo ambiente conda com Python3+
-$ conda create --name python-cnn python=3.5
+$ conda create --name python-cnn python=3.6.9
 
 # Ativar o ambiente
 $ conda activate python-cnn
@@ -151,7 +151,7 @@ $ conda activate python-cnn
 (python-cnn) $ conda install notebook ipykernel
 
 # Com o ipykernel criar um kernel com o python 3.5 automático
-(python-cnn) $ ipython kernel install --user
+(python-cnn) $ ipython kernel install --user --name python-cnn
 
 # Instalar o servidor Jupyter Lab
 (python-cnn) $ python -m pip install jupyter
@@ -159,14 +159,14 @@ $ conda activate python-cnn
 # Instalar a biblioteca gdal e basemap para processar as imagens
 (python-cnn) $ conda install -c conda-forge gdal=2.4.4
 
-# Instalar a biblioteca gdal e basemap para processar as imagens
-(python-cnn) $ conda install basemap
-
 # Executar o servidor em modo de desenvolvimento
 (python-cnn) $ jupyter notebook
 </code></pre></div>
 
 
+<blockquote>
+<p><strong>Obs.:</strong> Pode ser que o Notebook não  reconheça o kernel instalado pelo conda, sendo assim você pode alterar manualmente <code>kernel &gt;&gt; Change Kernel &gt;&gt; python-cnn</code>.</p>
+</blockquote>
 <h3 id="ambiente-de-micro-servicos-em-docker">Ambiente de micro serviços em docker<a class="headerlink" href="#ambiente-de-micro-servicos-em-docker" title="Permanent link">&para;</a></h3>
 <div class="codehilite"><pre><span></span><code>    TODO
 </code></pre></div>
@@ -174,6 +174,7 @@ $ conda activate python-cnn
 
 <h3 id="codigo-fonte">Código fonte<a class="headerlink" href="#codigo-fonte" title="Permanent link">&para;</a></h3>
 <blockquote>
+<p>Também será necessário acesso ao <a href="http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1/">servidor FTP</a>.</p>
 <p>Para a execução do código fonte abaixo é necessário o download da pasta <a href="https://fatecspgov-my.sharepoint.com/:f:/g/personal/abner_anjos_fatec_sp_gov_br/EqcawzIRy5VBhi7LqlXGtpgB-DHpZq5IG1DspKuwD59YBA?e=4LEDNC"><code>data/</code></a>, após o download descompacte na pasta root do projeto.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>data/
@@ -184,7 +185,7 @@ $ conda activate python-cnn
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span> <span class="n">matplotlib</span> <span class="n">georaster</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># !pip install tensorflow matplotlib pillow wget</span>
 </code></pre></div>
 
 
@@ -196,25 +197,49 @@ $ conda activate python-cnn
 <span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">MaxPooling2D</span>
 <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
 
-<span class="kn">import</span> <span class="nn">os</span>
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-<span class="kn">import</span> <span class="nn">requests</span>
-<span class="kn">import</span> <span class="nn">georaster</span> <span class="k">as</span> <span class="nn">gr</span>
+
+<span class="kn">from</span> <span class="nn">services.georasters</span> <span class="kn">import</span> <span class="n">Georaster</span> <span class="k">as</span> <span class="n">gr</span>
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="n">base_url</span> <span class="o">=</span> <span class="s2">&quot;http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1&quot;</span>
-<span class="n">sentinel1a</span> <span class="o">=</span> <span class="s2">&quot;/20170612_S1A&quot;</span>
-<span class="n">sentinel1b</span> <span class="o">=</span> <span class="s2">&quot;/20170612_S1A&quot;</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># clip_20170612T083546_Sigma0_VH_db</span>
+<span class="c1"># getGeoRaster(self, date, band, file=False, download=True, convert=True):</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">gr</span><span class="p">(</span><span class="s1">&#39;/home/abner&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getGeoRaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="n">test</span> <span class="o">=</span> <span class="n">base_url</span> <span class="o">+</span> <span class="n">sentinel1a</span> <span class="o">+</span> <span class="s2">&quot;/clip_20170612T083546_Sigma0_VH_db.tif&quot;</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">gr</span><span class="o">.</span><span class="n">from_file</span><span class="p">(</span><span class="n">raster</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;image/jpg&quot;</span><span class="p">)</span>
+</code></pre></div>
 
-<span class="c1"># Plot data</span>
-<span class="n">data</span><span class="o">.</span><span class="n">plot</span><span class="p">()</span>
+
+<p align = "center">
+  <img width = "600px" src = "../assets/output_5_0.png">
+</p>
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetProjection</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&#39;PROJCS[&quot;WGS 84 / UTM zone 23S&quot;,GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;latitude_of_origin&quot;,0],PARAMETER[&quot;central_meridian&quot;,-45],PARAMETER[&quot;scale_factor&quot;,0.9996],PARAMETER[&quot;false_easting&quot;,500000],PARAMETER[&quot;false_northing&quot;,10000000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AXIS[&quot;Easting&quot;,EAST],AXIS[&quot;Northing&quot;,NORTH],AUTHORITY[&quot;EPSG&quot;,&quot;32723&quot;]]&#39;
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetMetadata</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>{&#39;AREA_OR_POINT&#39;: &#39;Area&#39;}
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">band</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetRasterBand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">band</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&lt;osgeo.gdal.Band; proxy of &lt;Swig Object of type &#39;GDALRasterBandShadow *&#39; at 0x7f120b5ad540&gt; &gt;
 </code></pre></div></div>
             </div>
         </div>
