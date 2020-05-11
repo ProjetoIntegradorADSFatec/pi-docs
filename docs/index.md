@@ -14,7 +14,7 @@ Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa [Visi
 
 ## Solução
 
-Desenvolver um Sistema Web Gis - Sistema de informação Geográfico - com uma interface gráfica agradável ao usuário e de fácil utilização e intuitiva, com uma área de visualização de imagens do mapa, conforme a região e o período de tempo selecionados pelo usuário, permitindo a manipulação da imagem (aumentar ou diminuir e demarcação) e permitir o download desse arquivo para armazenamento.
+Desenvolver um Sistema inteligente para a identificação automática de Talhões com uso de Inteligência Artificial e processos de classificação de imagens e com um projeto Web Gis - Sistema de informação Geográfico - contendo uma interface gráfica agradável ao usuário e de fácil utilização e intuitiva, com uma área de visualização de imagens do mapa, conforme a região e o período de tempo selecionados pelo usuário, permitindo a manipulação da imagem (aumentar ou diminuir e demarcação) e permitir o download desse arquivo para armazenamento.
 
 
 #### Implementação
