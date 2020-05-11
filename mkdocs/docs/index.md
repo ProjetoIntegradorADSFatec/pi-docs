@@ -55,7 +55,44 @@ Para a implementação será necessário a utilização das seguintes tecnologia
 
 ## Documentação
 
-- [Termo de Abertura de Projeto](https://drive.google.com/file/d/1nnV2h9FB3pbM5EfAqz9798ZM5i5_dByI/view?usp=sharing)
-- [Diagrama de Tempo e Custo](https://drive.google.com/file/d/1wMbgBH2JSWBZ-Wwjd0vlBqT1y6fgaFn_/view?usp=sharing)
-- [Declaração de escopo](https://drive.google.com/file/d/1hmpUrkC_63x_zu5t5hC8l96A9VVje4mf/view?usp=sharing)
-- [Design Thinking](https://drive.google.com/file/d/1RSSCUZSfVPDrsy4MWIIZzh7bvLL_jkMS/view?usp=sharing)
+Documentos relacionados às disciplinas participantes do projeto integrador da Fatec organizadas por sprints e datas.
+
+> **Sprint 1 (2020 - 03 - 20)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+Gestão de Projetos                              |[Termo de Abertura de Projeto](https://drive.google.com/file/d/1nnV2h9FB3pbM5EfAqz9798ZM5i5_dByI/view?usp=sharing)
+Gestão de Projetos                              |[Diagrama de Tempo e Custo](https://drive.google.com/file/d/1wMbgBH2JSWBZ-Wwjd0vlBqT1y6fgaFn_/view?usp=sharing)
+Gestão de Projetos                              |[Declaração de escopo](https://drive.google.com/file/d/1hmpUrkC_63x_zu5t5hC8l96A9VVje4mf/view?usp=sharing)
+Gestão e Governança de Tecnologia da Informação |[Design Thinking](https://drive.google.com/file/d/1RSSCUZSfVPDrsy4MWIIZzh7bvLL_jkMS/view?usp=sharing)
+Empreendedorismo                                |[Canvas](https://drive.google.com/file/d/1Sg1xIVtpnIN9iEnfpHGnQHcldyXrI-vG/view?usp=sharing)
+
+<!-- > **Sprint 2 (2020 - 05 - 15)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+TODO                                            |TODO
+
+> **Sprint 3 (2020 - 05 - 29)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+TODO                                            |TODO
+
+> **Sprint 4 (2020 - 06 - 12)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+TODO                                            |TODO
+
+> **Sprint 5 (2020 - 06 - 26)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+TODO                                            |TODO
+
+> **Sprint Final (2020 - 07 - 10)**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+TODO                                            |TODO -->
