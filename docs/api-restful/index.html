@@ -49,7 +49,7 @@
 </li>
                                     
 <li>
-    <a href="bd/" class="dropdown-item">Data Base</a>
+    <a href="db/" class="dropdown-item">Data Base</a>
 </li>
                                 </ul>
                             </li>
@@ -199,6 +199,13 @@ $ docker run --name spring-api-restful -p 4040:8080 -d spring-restful
 
 
 <blockquote>
+<p>O banco de dados criado por essa aplicação possui o seguinte modelo de relações:</p>
+</blockquote>
+<p align = "center">
+  <img width = "300px" src = "../assets/db-model.png">
+</p>
+
+<blockquote>
 <p>Após o comando <code>docker run</code> digite o seguinte <code>docker ps</code> para listar os serviços  em execução pelo seu docker instalado, a resposta deve ser a seguinte:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>$ docker ps
@@ -208,17 +215,26 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
 
 
 <blockquote>
-<p>Em seu navegador digite o seguinte link <code>localhost:8080/cache/list</code> e verá a seguinte resposta:</p>
+<p>Em seu navegador digite o seguinte link <code>localhost:8080/catalog/list</code> e verá a seguinte resposta:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span> <span class="p">:</span> <span class="mi">16324</span><span class="p">,</span>
-        <span class="nt">&quot;name&quot;</span> <span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db.tif&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span> <span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH Sentinel 1&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;band&quot;</span> <span class="p">:</span> <span class="s2">&quot;band VH polarization effect&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;link&quot;</span> <span class="p">:</span> <span class="s2">&quot;http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1/20170612_S1A/clip_20170612T083546_Sigma0_VH_db.tif&quot;</span>
-    <span class="p">},</span>
-    <span class="err">...</span>
+        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;band&quot;</span><span class="p">:</span> <span class="s2">&quot;VH&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJCS[&#39;WGS 84 / UTM zone 23S&#39;,GEOGCS[AUTHORITY[&#39;EPSG&#39;,&#39;32723&#39;]]&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mi">-12</span><span class="p">,</span>
+                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mi">-54</span><span class="p">,</span>
+                <span class="nt">&quot;catalog&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">}</span>
+        <span class="p">],</span>
+        <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1/20170612_S1A/clip_20170612T083546_Sigma0_VH_db.tif&quot;</span>
+    <span class="p">}</span>
 <span class="p">]</span>
 </code></pre></div>
 
