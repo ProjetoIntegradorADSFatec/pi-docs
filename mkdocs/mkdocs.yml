@@ -16,7 +16,7 @@ nav:
   - API-Restful:
     - About: 'api-restful/index.md'
     - Geoserver: 'api-restful/geoserver/index.md'
-    - Data Base: 'api-restful/bd/index.md'
+    - Data Base: 'api-restful/db/index.md'
   - Web-GIS: 'web-gis/index.md'
   - Sistema Inteligente: 'python-cnn/index.md'
 
