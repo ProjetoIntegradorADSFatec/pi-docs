@@ -9,7 +9,7 @@
 
 Projeto Integrador entre o sexto período da Faculdade de Tecnologia de São José dos Campos, Professor Jessen Vidal de *Análise e Desenvolvimento de Sistemas* e a empresa [*Visiona*](http://www.visionaespacial.com.br/), para qual nos forneceu o problema da identificação de talhões em imagens de sensoriamento remoto.
 
-Para o funcionamento da API Spring Boot é necessário os seguintes requisitos:
+Para o funcionamento da API Spring Boot com o catálogo de imagens, é necessário os seguintes requisitos:
 
 - Uma instância do banco de dados [PostgreSQL/PostGIS](./db) em execução e configurado;
 - Um servidor de mapas [Geoserver](./geoserver) em execução e configurado;
@@ -18,7 +18,7 @@ Para o funcionamento da API Spring Boot é necessário os seguintes requisitos:
 
 Este projeto consiste em:
 
-1. Desenvolvimento de uma API RESTful para consulta de dados georreferenciados em um banco de dados PostGIS;
+1. Desenvolvimento de uma API RESTful para o catálogo de imagens georreferenciados em um banco de dados PostGIS;
 2. Com dados multitemporais, utilizar-se de inteligência artificial para identificar talhões em uma área de interesse.
 
 # Ferramentas
@@ -91,3 +91,4 @@ a06cb1ccf107        spring-restful         "java -jar /app.jar"     25 hours ago
  - [Visiona](http://www.visionaespacial.com.br/);
  - [Jenkins](https://jenkins.io/);
  - [ngrok](https://ngrok.com/);
+
