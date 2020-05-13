@@ -8,7 +8,7 @@ Página inicial para a documentação do [Projeto Integrador](https://github.com
 #### Instalação
 
 ~~~shell
-(docs) $ pip install -requirements.txt
+(docs) $ pip install -r requirements.txt
 ~~~
 
 #### Testes e Testes e Execução

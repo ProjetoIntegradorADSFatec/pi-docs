@@ -65,7 +65,7 @@ Gestão de Projetos                              |[Termo de Abertura de Projeto]
 Gestão de Projetos                              |[Diagrama de Tempo e Custo](https://drive.google.com/file/d/1wMbgBH2JSWBZ-Wwjd0vlBqT1y6fgaFn_/view?usp=sharing)
 Gestão de Projetos                              |[Declaração de escopo](https://drive.google.com/file/d/1hmpUrkC_63x_zu5t5hC8l96A9VVje4mf/view?usp=sharing)
 Gestão e Governança de Tecnologia da Informação |[Design Thinking](https://drive.google.com/file/d/1RSSCUZSfVPDrsy4MWIIZzh7bvLL_jkMS/view?usp=sharing)
-Empreendedorismo                                |[Canvas](https://drive.google.com/file/d/11-YebQ9FPRX5kdglsJz-f4wltRxZvZJQ/view?usp=sharing)
+Empreendedorismo                                |[Canvas](https://drive.google.com/file/d/1AAZMXMnLsuSl9LcXtxHhdLmP7HeEOv7L/view?usp=sharing)
 
 <!-- > **Sprint 2 (2020 - 05 - 15)**
 
