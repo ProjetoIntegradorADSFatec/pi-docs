@@ -141,7 +141,11 @@ usuários do Web GIS visualizem e naveguem pelas imagens sem precisar baixá-las
 </blockquote>
 <p><strong>Obs.:</strong> Instalação do Miniconda é necessária para a execução dos comandos a seguir.</p>
 <h3 id="ambiente-de-desenvolvimento">Ambiente de Desenvolvimento<a class="headerlink" href="#ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h3>
-<div class="codehilite"><pre><span></span><code># Crie um novo ambiente conda com Python3+
+<div class="codehilite"><pre><span></span><code># Montar no ambiente Linux
+$ sudo apt-get update
+$ sudo apt-get install python-numpy gdal-bin libgdal-dev
+
+# Crie um novo ambiente conda com Python3+
 $ conda create --name python-cnn python=3.6.9
 
 # Ativar o ambiente
@@ -185,7 +189,7 @@ $ conda activate python-cnn
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># !pip install tensorflow matplotlib pillow wget</span>
+<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span> <span class="n">matplotlib</span> <span class="n">pillow</span> <span class="n">wget</span> <span class="n">rasterio</span>
 </code></pre></div>
 
 
@@ -200,47 +204,69 @@ $ conda activate python-cnn
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
 
-<span class="kn">from</span> <span class="nn">services.georasters</span> <span class="kn">import</span> <span class="n">Georaster</span> <span class="k">as</span> <span class="n">gr</span>
+<span class="kn">from</span> <span class="nn">services.georasters</span> <span class="kn">import</span> <span class="n">Georaster</span>
 </code></pre></div>
 
 
 <div class="codehilite"><pre><span></span><code><span class="c1"># clip_20170612T083546_Sigma0_VH_db</span>
 <span class="c1"># getGeoRaster(self, date, band, file=False, download=True, convert=True):</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">gr</span><span class="p">(</span><span class="s1">&#39;/home/abner&#39;</span><span class="p">)</span><span class="o">.</span><span class="n">getGeoRaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="n">file</span><span class="o">=</span><span class="kc">False</span><span class="p">,</span> <span class="n">download</span><span class="o">=</span><span class="kc">True</span><span class="p">,</span> <span class="n">convert</span><span class="o">=</span><span class="kc">True</span><span class="p">)</span>
+<span class="n">data</span> <span class="o">=</span> <span class="n">Georaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="mi">4326</span><span class="p">)</span>
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;image/jpg&quot;</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">openRemoteFile</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>True
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">projection</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&#39;EPSG:4326&#39;
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">downloadRemoteFile</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>True
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">convertFileToJPG</span><span class="p">()</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>True
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">georaster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>array([[nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       ...,
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan],
+       [nan, nan, nan, ..., nan, nan, nan]], dtype=float32)
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">jpg</span>
 </code></pre></div>
 
 
 <p align = "center">
-  <img width = "600px" src = "../assets/output_5_0.png">
-</p>
-
-<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetProjection</span><span class="p">()</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>&#39;PROJCS[&quot;WGS 84 / UTM zone 23S&quot;,GEOGCS[&quot;WGS 84&quot;,DATUM[&quot;WGS_1984&quot;,SPHEROID[&quot;WGS 84&quot;,6378137,298.257223563,AUTHORITY[&quot;EPSG&quot;,&quot;7030&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;6326&quot;]],PRIMEM[&quot;Greenwich&quot;,0,AUTHORITY[&quot;EPSG&quot;,&quot;8901&quot;]],UNIT[&quot;degree&quot;,0.0174532925199433,AUTHORITY[&quot;EPSG&quot;,&quot;9122&quot;]],AUTHORITY[&quot;EPSG&quot;,&quot;4326&quot;]],PROJECTION[&quot;Transverse_Mercator&quot;],PARAMETER[&quot;latitude_of_origin&quot;,0],PARAMETER[&quot;central_meridian&quot;,-45],PARAMETER[&quot;scale_factor&quot;,0.9996],PARAMETER[&quot;false_easting&quot;,500000],PARAMETER[&quot;false_northing&quot;,10000000],UNIT[&quot;metre&quot;,1,AUTHORITY[&quot;EPSG&quot;,&quot;9001&quot;]],AXIS[&quot;Easting&quot;,EAST],AXIS[&quot;Northing&quot;,NORTH],AUTHORITY[&quot;EPSG&quot;,&quot;32723&quot;]]&#39;
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetMetadata</span><span class="p">()</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>{&#39;AREA_OR_POINT&#39;: &#39;Area&#39;}
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code><span class="n">band</span> <span class="o">=</span> <span class="n">data</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s2">&quot;georaster&quot;</span><span class="p">)</span><span class="o">.</span><span class="n">GetRasterBand</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
-<span class="n">band</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code>&lt;osgeo.gdal.Band; proxy of &lt;Swig Object of type &#39;GDALRasterBandShadow *&#39; at 0x7f120b5ad540&gt; &gt;
-</code></pre></div></div>
+  <img width = "600px" src = "../assets/output_10_0.png">
+</p></div>
             </div>
         </div>
 
