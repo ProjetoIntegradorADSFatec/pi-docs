@@ -161,7 +161,7 @@ $ conda activate python-cnn
 (python-cnn) $ python -m pip install jupyter
 
 # Instalar a biblioteca gdal e basemap para processar as imagens
-(python-cnn) $ conda install -c conda-forge gdal=2.4.4
+(python-cnn) $ conda install -c conda-forge gdal=2.4.4 decartes
 
 # Executar o servidor em modo de desenvolvimento
 (python-cnn) $ jupyter notebook
@@ -189,7 +189,7 @@ $ conda activate python-cnn
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span> <span class="n">matplotlib</span> <span class="n">pillow</span> <span class="n">wget</span> <span class="n">rasterio</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># !pip install tensorflow numpy matplotlib pillow wget rasterio geopandas</span>
 </code></pre></div>
 
 
@@ -203,14 +203,16 @@ $ conda activate python-cnn
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
-
-<span class="kn">from</span> <span class="nn">services.georasters</span> <span class="kn">import</span> <span class="n">Georaster</span>
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># clip_20170612T083546_Sigma0_VH_db</span>
-<span class="c1"># getGeoRaster(self, date, band, file=False, download=True, convert=True):</span>
-<span class="n">data</span> <span class="o">=</span> <span class="n">Georaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="mi">4326</span><span class="p">)</span>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Abstração das buscas por polígonos e georasters</span>
+<span class="kn">from</span> <span class="nn">services.georasters</span> <span class="kn">import</span> <span class="n">Georaster</span>
+<span class="kn">from</span> <span class="nn">services.vector</span> <span class="kn">import</span> <span class="n">Vector</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">Georaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="mi">4326</span><span class="p">)</span>
 </code></pre></div>
 
 
@@ -265,7 +267,271 @@ $ conda activate python-cnn
 
 
 <p align = "center">
-  <img width = "600px" src = "../assets/output_10_0.png">
+  <img width = "600px" src = "../assets/output_11_0.png">
+</p>
+
+<div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;coordinates&#39;</span><span class="p">):</span>
+    <span class="k">for</span> <span class="n">coord</span> <span class="ow">in</span> <span class="n">coords</span><span class="p">:</span>
+        <span class="nb">print</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">georaster</span><span class="o">.</span><span class="n">read</span><span class="p">(</span><span class="mi">1</span><span class="p">)[</span><span class="nb">int</span><span class="p">(</span><span class="n">coord</span><span class="p">[</span><span class="mi">1</span><span class="p">])][</span><span class="nb">int</span><span class="p">(</span><span class="n">coord</span><span class="p">[</span><span class="mi">0</span><span class="p">])])</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>-18.735785
+-19.409836
+-20.503849
+-17.980326
+-18.735785
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">shapes</span> <span class="o">=</span> <span class="n">Vector</span><span class="p">(</span><span class="mi">4326</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">geom</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">data_geom</span> <span class="o">=</span> <span class="n">shapes</span><span class="o">.</span><span class="n">shape</span><span class="p">(</span><span class="n">data</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;coordinates&#39;</span><span class="p">)[</span><span class="mi">0</span><span class="p">])</span>
+<span class="n">data_geom</span>
+</code></pre></div>
+
+
+<p align = "center">
+  <img width = "100px" src = "../assets/output_15_0.svg">
+</p>
+
+<div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">geom</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>{&#39;type&#39;: &#39;Polygon&#39;,
+ &#39;coordinates&#39;: [[[-46.422421, -11.831513],
+   [-46.426524, -12.598503],
+   [-45.629512, -12.601568],
+   [-45.627701, -11.834385],
+   [-46.422421, -11.831513]]]}
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">lem</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>NM_MUNICIP</th>
+      <th>CD_GEOCMU</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>LUÃS EDUARDO MAGALHÃES</td>
+      <td>2919553</td>
+      <td>POLYGON ((-45.71038 -12.39706, -45.71422 -12.3...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">covers</span><span class="o">.</span><span class="n">head</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span>
+</code></pre></div>
+
+
+<div>
+<style scoped>
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+<table border="1" class="dataframe">
+  <thead>
+    <tr style="text-align: right;">
+      <th></th>
+      <th>Id</th>
+      <th>area_ha</th>
+      <th>Jun_2017</th>
+      <th>Jul_2017</th>
+      <th>Aug_2017</th>
+      <th>Sep_2017</th>
+      <th>Oct_2017</th>
+      <th>Nov_2017</th>
+      <th>Dec_2017</th>
+      <th>Jan_2018</th>
+      <th>Feb_2018</th>
+      <th>Mar_2018</th>
+      <th>Apr_2018</th>
+      <th>May_2018</th>
+      <th>Jun_2018</th>
+      <th>Geral</th>
+      <th>variacao</th>
+      <th>var</th>
+      <th>geometry</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <th>0</th>
+      <td>1</td>
+      <td>341.632515</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>xxxxxxxsssxxx</td>
+      <td>xsx</td>
+      <td>s</td>
+      <td>POLYGON ((391870.392 8678209.011, 390327.395 8...</td>
+    </tr>
+    <tr>
+      <th>1</th>
+      <td>523</td>
+      <td>148.290258</td>
+      <td>millet</td>
+      <td>millet</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>not identified</td>
+      <td>uncultivated soil</td>
+      <td>not identified</td>
+      <td>not identified</td>
+      <td>uncultivated soil</td>
+      <td>millet</td>
+      <td>millet</td>
+      <td>uncultivated soil</td>
+      <td>llxxx-x--xllx</td>
+      <td>lxlx</td>
+      <td>ll</td>
+      <td>POLYGON ((362953.448 8648254.537, 362492.885 8...</td>
+    </tr>
+    <tr>
+      <th>2</th>
+      <td>3</td>
+      <td>196.784309</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>xxxxxxxsssxxx</td>
+      <td>xsx</td>
+      <td>s</td>
+      <td>POLYGON ((394667.970 8677930.309, 394381.632 8...</td>
+    </tr>
+    <tr>
+      <th>3</th>
+      <td>524</td>
+      <td>28.625248</td>
+      <td>sorghum</td>
+      <td>sorghum</td>
+      <td>sorghum</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>zzzxxxxsssxxx</td>
+      <td>zxsx</td>
+      <td>zs</td>
+      <td>POLYGON ((378784.772 8650768.854, 378340.528 8...</td>
+    </tr>
+    <tr>
+      <th>4</th>
+      <td>6</td>
+      <td>369.452478</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>soybean</td>
+      <td>soybean</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>uncultivated soil</td>
+      <td>xxxxxxxxssxxx</td>
+      <td>xsx</td>
+      <td>s</td>
+      <td>POLYGON ((398795.097 8680743.662, 398796.144 8...</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+
+<div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">lem</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff1c3878358&gt;
+</code></pre></div>
+
+
+<p align = "center">
+  <img width = "500px" src = "../assets/output_19_1.png">
+</p>
+
+<div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">covers</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&lt;matplotlib.axes._subplots.AxesSubplot at 0x7ff135251be0&gt;
+</code></pre></div>
+
+
+<p align = "center">
+  <img width = "500px" src = "../assets/output_20_1.png">
 </p></div>
             </div>
         </div>
