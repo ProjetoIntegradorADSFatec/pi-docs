@@ -1,6 +1,6 @@
 # Projeto Integrador ADS Fatec
 
-[![License: CC BY 4.0](https://img.shields.io/badge/license-MIT-green)](https://github.com/ProjetoIntegradorADSFatec/projeto-integrador-ads-fatec/blob/master/LICENSE)
+[![License: CC BY 4.0](https://img.shields.io/badge/license-MIT-green)](https://github.com/ProjetoIntegradorADSFatec/pi-docs/blob/master/LICENSE)
 
 Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa [Visiona](http://www.visionaespacial.com.br/) para a identificação de talhões (unidade mínima de cultivo de uma propriedade com características em comum). Link Oficial para o projeto [Github](https://github.com/ProjetoIntegradorADSFatec).
 
@@ -67,13 +67,16 @@ Gestão de Projetos                              |[Declaração de escopo](https
 Gestão e Governança de Tecnologia da Informação |[Design Thinking](https://drive.google.com/file/d/1RSSCUZSfVPDrsy4MWIIZzh7bvLL_jkMS/view?usp=sharing)
 Empreendedorismo                                |[Canvas](https://drive.google.com/file/d/1AAZMXMnLsuSl9LcXtxHhdLmP7HeEOv7L/view?usp=sharing)
 
-<!-- > **Sprint 2 (2020 - 05 - 15)**
+> **Sprint 2 (2020 - 05 - 15)**
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
-TODO                                            |TODO
+Gestão e Governança de Tecnologia da Informação |[BSC - Balanced Scorecard](https://drive.google.com/file/d/1kS4O_ErVy5wYuRAzL8gqQoOhbU4rbYYo/view?usp=sharing)
+Gestão de Projetos                              |[Diagrama de Tempo e Custo MS Project](https://drive.google.com/file/d/1qtUVglrDGS5rgMCXIxtRxlRjEvCXKqTV/view?usp=sharing)
+Gestão de Projetos                              |[Visão Geral do Custo de Recursos](https://drive.google.com/file/d/1aOyRMshOYKckCuB8SKlItDx1u5lc2nSN/view?usp=sharing)
+Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1ciJBcEgZv6-_9pi5Ac1IjtFsf2oSbu4w/view?usp=sharing)
 
-> **Sprint 3 (2020 - 05 - 29)**
+<!-- > **Sprint 3 (2020 - 05 - 29)**
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
