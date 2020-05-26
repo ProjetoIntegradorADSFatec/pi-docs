@@ -6,7 +6,7 @@ Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa [Visi
 
 > **- [Projeto Oficial Github](https://github.com/ProjetoIntegradorADSFatec);**
 
-> **- [Sprints e Evolução do Código Fonte do Projeto](/changes);**
+> **- [Sprints e Evolução do Código Fonte do Projeto](./pi-docs/changes);**
 
 ## Componentes
 
