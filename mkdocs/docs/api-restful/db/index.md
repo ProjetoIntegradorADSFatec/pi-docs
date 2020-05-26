@@ -28,10 +28,10 @@ $ docker run --name pgadmin4 -p 16543:80 -e PGADMIN_DEFAULT_EMAIL,PGADMIN_DEFAUL
 
 > Criação do container docker PostgreSQL e PGAdmin4 (Interface Gráfica) por default com o Docker Compose
 ```
-$ docker compose up -d postgresql pgadmin4
+$ docker-compose up -d postgresql pgadmin4
 ```
 
-**Obs.:** Não esqueça de cadastrar o servidor de banco de dados PostgreSQL para o uso da interface gráfica PGAdmin4 com as credenciais necessárias
+**Obs.:** Será necessário instalar a ferramenta (docker-compose)[https://docs.docker.com/compose/] e não esqueça de cadastrar o servidor de banco de dados PostgreSQL para o uso da interface gráfica PGAdmin4 com as credenciais necessárias
 
 ## Ambiente PSQL
 ```

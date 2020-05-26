@@ -13,6 +13,7 @@ copyright: 'Copyright &copy; 2020 Fatec SP.'
 # Configuration
 nav:
   - Home: 'index.md'
+  - Docs: 'changes/index.md'
   - API-Restful:
     - About: 'api-restful/index.md'
     - Geoserver: 'api-restful/geoserver/index.md'
