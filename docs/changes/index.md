@@ -50,13 +50,23 @@ Gestão de Projetos                              |[Diagrama de Tempo e Custo MS 
 Gestão de Projetos                              |[Visão Geral do Custo de Recursos](https://drive.google.com/file/d/1aOyRMshOYKckCuB8SKlItDx1u5lc2nSN/view?usp=sharing)
 Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1ciJBcEgZv6-_9pi5Ac1IjtFsf2oSbu4w/view?usp=sharing)
 
-<!-- ## Sprint 3 (2020 - 05 - 29)
+## Sprint 3 (2020 - 05 - 29)
+
+> **Descrição:**
+
+- Criação da base de dados para os os testes envolvendo o modelo criado com o TensorFlow classificador de imagens usando imagens do Sentinel e Landsat;
+
+> **Links para as milestones e issues relacionadas à segunda entrega (Sprint 2):**
+
+- [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/2?closed=1) - construção do modelo inicial para os testes com uma base de dados mínima;
+
+> **Tabela de entregas:**
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
 TODO                                            |TODO
 
-## Sprint 4 (2020 - 06 - 12)
+<!-- ## Sprint 4 (2020 - 06 - 12)
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
