@@ -68,7 +68,7 @@ $ docker run --name spring-api-restful -p 4040:8080 -d spring-restful
 > O banco de dados criado por essa aplicação possui o seguinte modelo de relações:
 
 <p align = "center">
-  <img width = "300px" src = "./docs/assets/db-model.png">
+  <img width = "300px" src = "../assets/db-model.png">
 </p>
 
 > Após o comando `docker run` digite o seguinte `docker ps` para listar os serviços  em execução pelo seu docker instalado, a resposta deve ser a seguinte:
@@ -117,7 +117,7 @@ GET localhost:8080/catalog/list
 ]
 ~~~
 
-> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](./docs/examples) no banco de dados Postgre por método POST:
+> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) no banco de dados Postgre por método POST:
 
 ```
 POST localhost:8080/catalog/add
@@ -144,7 +144,7 @@ POST localhost:8080/catalog/add
 }
 ~~~
 
-> **Busca de imagens:** busca imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/) com os atributos definidos nos [exemplos](./docs/examples) em projeção **EPSG:4326** com banco de dados Postgre por método POST:
+> **Busca de imagens:** busca imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/) com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) em projeção **EPSG:4326** com banco de dados Postgre por método POST:
 
 ```
 POST localhost:8080/catalog/search
