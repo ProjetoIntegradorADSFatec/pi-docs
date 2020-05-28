@@ -129,6 +129,11 @@
               </ul>
             </li>
             
+            <li class="nav-item" data-level="1"><a href="#operacoes" class="nav-link">Operações</a>
+              <ul class="nav flex-column">
+              </ul>
+            </li>
+            
             <li class="nav-item" data-level="1"><a href="#referencias" class="nav-link">Referências</a>
               <ul class="nav flex-column">
               </ul>
@@ -169,6 +174,7 @@
 <ol>
 <li><em>Clone</em>: Para buscar o repositório com os novos dados;</li>
 <li><em>Environment</em>: Instala as dependências do projeto;</li>
+<li><em>Testes</em>: Execução dos Testes JUnit.</li>
 </ol>
 <p>Configuar Webhook no GitHUB para o <em>endpoint</em> do Jenkins (<em>URL do ngrok se foi utilizado</em>) e ativar a opção:
 * GitHub hook trigger for GITScm polling</p>
@@ -190,7 +196,7 @@
 
 <h2 id="execucao-da-aplicacao-em-micro-servicos">Execução da aplicação em micro serviços<a class="headerlink" href="#execucao-da-aplicacao-em-micro-servicos" title="Permanent link">&para;</a></h2>
 <p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><code>application.properties</code></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
-<div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5+
+<div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
 
 ## Construir a imagem docker com base no `Dockerfile`
@@ -205,7 +211,7 @@ $ docker run --name spring-api-restful -p 4040:8080 -d spring-restful
 <p>O banco de dados criado por essa aplicação possui o seguinte modelo de relações:</p>
 </blockquote>
 <p align = "center">
-  <img width = "300px" src = "../assets/db-model.png">
+  <img width = "300px" src = "./docs/assets/db-model.png">
 </p>
 
 <blockquote>
@@ -218,8 +224,16 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
 
 
 <blockquote>
-<p>Em seu navegador digite o seguinte link <code>localhost:8080/catalog/list</code> e verá a seguinte resposta:</p>
+<p>Em seu navegador digite o seguinte link <code>localhost:8080/catalog/list</code>.</p>
 </blockquote>
+<h1 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h1>
+<blockquote>
+<p><strong>Listagem:</strong> lista todas as imagens cadastradas no banco de dados Postgre por método GET:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>GET localhost:8080/catalog/list
+</code></pre></div>
+
+
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -230,9 +244,16 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
         <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
             <span class="p">{</span>
                 <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;PROJCS[&#39;WGS 84 / UTM zone 23S&#39;,GEOGCS[AUTHORITY[&#39;EPSG&#39;,&#39;32723&#39;]]&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mi">-12</span><span class="p">,</span>
-                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mi">-54</span><span class="p">,</span>
+                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.042006714207925</span><span class="p">,</span>
+                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.8734130859375</span><span class="p">,</span>
+                <span class="nt">&quot;catalog&quot;</span><span class="p">:</span> <span class="kc">null</span>
+            <span class="p">},</span>
+            <span class="p">{</span>
+                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
+                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
+                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.224602049269444</span><span class="p">,</span>
+                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.7415771484375</span><span class="p">,</span>
                 <span class="nt">&quot;catalog&quot;</span><span class="p">:</span> <span class="kc">null</span>
             <span class="p">}</span>
         <span class="p">],</span>
@@ -242,6 +263,72 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
 </code></pre></div>
 
 
+<blockquote>
+<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados Postgre por método POST:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>POST localhost:8080/catalog/add
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+    <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;band&quot;</span><span class="p">:</span> <span class="s2">&quot;VH&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.042006714207925</span><span class="p">,</span>
+            <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.8734130859375</span>
+        <span class="p">},</span>
+        <span class="p">{</span>
+            <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
+            <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.224602049269444</span><span class="p">,</span>
+            <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.7415771484375</span>
+        <span class="p">}</span>
+    <span class="p">],</span>
+    <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1/20170612_S1A/clip_20170612T083546_Sigma0_VH_db.tif&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<blockquote>
+<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados Postgre por método POST:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>POST localhost:8080/catalog/search
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;dateTime&quot;</span> <span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;band&quot;</span> <span class="p">:</span> <span class="s2">&quot;VV&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;geojson&quot;</span> <span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
+      <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{},</span>
+        <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[[</span>
+              <span class="p">[</span>
+                <span class="mf">-47.3016357421875</span><span class="p">,</span>
+                <span class="mf">-11.248449735768247</span>
+              <span class="p">],</span>
+              <span class="err">...</span>
+            <span class="p">]</span>
+          <span class="p">]</span>
+        <span class="p">}</span>
+      <span class="p">}</span>
+    <span class="p">]</span>
+  <span class="p">}</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<blockquote>
+<p><strong>Obs.:</strong> Você pode aprender mais sobre GeoJSON's com o <a href="https://geojson.io/">geojson.io</a>.</p>
+</blockquote>
 <h1 id="referencias">Referências<a class="headerlink" href="#referencias" title="Permanent link">&para;</a></h1>
 <ul>
 <li><a href="http://www.visionaespacial.com.br/">Visiona</a>;</li>
