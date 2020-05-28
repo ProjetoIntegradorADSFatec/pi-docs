@@ -11,7 +11,7 @@ Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa [Visi
 ## Componentes
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn) - construção da base de dados a ser consumida;
-- [API](https://github.com/ProjetoIntegradorADSFatec/api-restful) - intermédio para a base de dados e o sistema Web GIS;
+- [API Restful](https://github.com/ProjetoIntegradorADSFatec/api-restful) - intermédio para a base de dados e o sistema Web GIS;
 - [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis) - visualização do resultado final;
 
 ## Solução
