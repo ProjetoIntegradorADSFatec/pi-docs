@@ -4,9 +4,9 @@
 
 Projeto Integrador ADS Fatec - São José dos Campos proposto pela empresa [Visiona](http://www.visionaespacial.com.br/) para a identificação de talhões (unidade mínima de cultivo de uma propriedade com características em comum).
 
-> **- [Projeto Oficial Github](https://github.com/ProjetoIntegradorADSFatec);**
+> - **[Projeto Oficial Github](https://github.com/ProjetoIntegradorADSFatec);**
 
-> **- [Sprints e Evolução do Código Fonte do Projeto](./changes);**
+> - **[Sprints e Evolução do Código Fonte do Projeto](./changes);**
 
 ## Componentes
 
