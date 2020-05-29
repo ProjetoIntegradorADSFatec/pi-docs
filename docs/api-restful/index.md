@@ -83,11 +83,14 @@ a06cb1ccf107        spring-restful         "java -jar /app.jar"     25 hours ago
 
 # Operações
 
-> **Listagem:** lista todas as imagens cadastradas no banco de dados Postgre por método GET:
+> **Listagem:** lista todas as imagens cadastradas no banco de dados PostgreSQL por método GET:
 
 ```
 GET localhost:8080/catalog/list
 ```
+
+> Response:
+
 ~~~json
 [
     {
@@ -117,11 +120,14 @@ GET localhost:8080/catalog/list
 ]
 ~~~
 
-> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) no banco de dados Postgre por método POST:
+> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](./docs/examples) no banco de dados PostgreSQL, método POST:
 
 ```
 POST localhost:8080/catalog/add
 ```
+
+> _Body_ para a requisição:
+
 ~~~json
 {
     "name": "clip_20170612T083546_Sigma0_VH_db",
@@ -144,11 +150,14 @@ POST localhost:8080/catalog/add
 }
 ~~~
 
-> **Busca de imagens:** busca imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/) com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) em projeção **EPSG:4326** com banco de dados Postgre por método POST:
+> **Busca de imagens:** busca de imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/), em concordãncia aos atributos definidos nos [exemplos](./docs/examples) em projeção **EPSG:4326** com banco de dados PostgreSQL,  método POST:
 
 ```
 POST localhost:8080/catalog/search
 ```
+
+> _Body_ para a requisição:
+
 ~~~json
 {
   "dateTime" : "2017-06-12 08:35:46",

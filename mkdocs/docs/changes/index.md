@@ -55,12 +55,16 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 > **Descrição:**
 
 - Criação da base de dados para os os testes envolvendo o modelo criado com o TensorFlow classificador de imagens usando imagens do Sentinel e Landsat;
+
 - Entrega da API Restful com a busca com polígonos formatados em geojson verificando o recorte de imagens feito pelo Sistema Web GIS, verificando se naquele polígono existe alguma imagem cadastrada no banco de dados geográfico;
+
+- Entrega do controle de download do sistema Web GIS para as imagens cadastradas no banco de dados PostGIS, assim como a integração com a API Restful e a implementação da visualização de camadas no servidor de mapas Geoserver;
 
 > **Links para as milestones e issues relacionadas à segunda entrega (Sprint 2):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/2?closed=1) - construção do modelo inicial para os testes com uma base de dados mínima;
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/3?closed=1) - implementando buscas com GeoJSON's para uma API otimizada;
+- [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis/milestone/3?closed=1) - implementando o controle de download para as imagens e a visualização de camadas com o servidor de mapas Geoserver;
 
 > **Tabela de entregas:**
 
