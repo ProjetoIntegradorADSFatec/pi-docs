@@ -60,7 +60,7 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 
 - Entrega do controle de download do sistema Web GIS para as imagens cadastradas no banco de dados PostGIS, assim como a integração com a API Restful e a implementação da visualização de camadas no servidor de mapas Geoserver;
 
-> **Links para as milestones e issues relacionadas à segunda entrega (Sprint 2):**
+> **Links para as milestones e issues relacionadas à terceira entrega (Sprint 3):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/2?closed=1) - construção do modelo inicial para os testes com uma base de dados mínima;
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/3?closed=1) - implementando buscas com GeoJSON's para uma API otimizada;
