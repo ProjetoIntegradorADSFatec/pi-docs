@@ -1,5 +1,7 @@
 ## Sprint 1 (2020 - 03 - 20)
 
+Nesta sprint a priorização foi a definição da base de dados para a construção da API Restful focando no catálogo de imagem e no armazenamento, além da definição da interface de usuário para o sistema de visualização Web GIS focando no map tile engine e no recorte e download das imagens.
+
 > **Descrição:**
 
 - Entrega da definição da base de dados a ser utilizada pelo sistema inteligente como catálogo de imagens;
@@ -25,6 +27,8 @@ Empreendedorismo                                |[Canvas](https://drive.google.c
 
 ## Sprint 2 (2020 - 05 - 15)
 
+Para esta sprint propomos o desenvolvimento da configuração inicial do sistema inteligente para a identificação de propriedades nas imagens de cobertura de terra capturadas pelo satélite Sentinel e Landsat priorizando a definição de máscaras.
+
 > **Descrição:**
 
 - Entrega da primeira versão do sistema inteligente com a avaliação dos dados e primeiro processamento de imagens com o catálogo de imagens do Sentinel-1;
@@ -44,13 +48,15 @@ Empreendedorismo                                |[Canvas](https://drive.google.c
 > **Tabela de entregas:**
 
 Disciplina                                      | Entrega de Documentos
-------------------------------------------------|------------------------------
+------------------------------------------------|--------------------------------------
 Gestão e Governança de Tecnologia da Informação |[BSC - Balanced Scorecard](https://drive.google.com/file/d/1kS4O_ErVy5wYuRAzL8gqQoOhbU4rbYYo/view?usp=sharing)
 Gestão de Projetos                              |[Diagrama de Tempo e Custo MS Project](https://drive.google.com/file/d/1qtUVglrDGS5rgMCXIxtRxlRjEvCXKqTV/view?usp=sharing)
 Gestão de Projetos                              |[Visão Geral do Custo de Recursos](https://drive.google.com/file/d/1aOyRMshOYKckCuB8SKlItDx1u5lc2nSN/view?usp=sharing)
 Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1ciJBcEgZv6-_9pi5Ac1IjtFsf2oSbu4w/view?usp=sharing)
 
 ## Sprint 3 (2020 - 05 - 29)
+
+Na sprint 3 com a base de dados definida foi efetuado alguns testes com os modelos do TensorFlow usando um misto de imagens do Sentinel e Landsat para enriquecer os dados de treinamento e validação da IA, também foi desenvolvida na API Restful uma busca com polígonos no banco de dados geográfico e a integração com o Web GIS utilizando dados em mock.
 
 > **Descrição:**
 
@@ -70,22 +76,20 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
-TODO                                            |TODO
+Gestão e Governança de Tecnologia da Informação |[BSC - Balanced Scorecard](https://drive.google.com/file/d/1jBexzQgpr8uJdv-IfP0euyYEM7zzX_Pw/view?usp=sharing)
+Gestão e Governança de Tecnologia da Informação |[Planejamento Estratégico em TI](https://drive.google.com/file/d/1rTOKte17w9lRJc9ogNa1FRwWYgrx3Wut/view?usp=sharing)
+Gestão de Projetos                              |[Matriz RACI](https://drive.google.com/file/d/1QUgzcjnUBof_faLmq_9nj2r_ejsxaYFG/view?usp=sharing)
+Gestão de Projetos                              |[Checklist](https://drive.google.com/file/d/1DhG1evvVJ8ElfI5vffmCfAvTp5HZgODr/view?usp=sharing)
+Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1NKJestgFaCls9jpd5COr4caw5dta5jSx/view?usp=sharing)
 
-<!-- ## Sprint 4 (2020 - 06 - 12)
+## Sprint 4 (2020 - 06 - 12)
 
-Disciplina                                      | Entrega de Documentos
-------------------------------------------------|------------------------------
-TODO                                            |TODO
+Para esta sprint será proposto a criação e o treinamento do modelo para a identificação de talhões assim como a definição das máscaras para as imagens, a integração da API  Restful com o sistema de visualização Web GIS para o download e recorte das imagens sem mock, além da implementação de tags para os repositórios com controle de versões.
 
 ## Sprint 5 (2020 - 06 - 26)
 
-Disciplina                                      | Entrega de Documentos
-------------------------------------------------|------------------------------
-TODO                                            |TODO
+Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful.
 
 ## Sprint Final (2020 - 07 - 10)
 
-Disciplina                                      | Entrega de Documentos
-------------------------------------------------|------------------------------
-TODO                                            |TODO -->
+Testes com a aplicação em funcionamento utilizando servidores em nuvem.
