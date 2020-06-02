@@ -2,6 +2,10 @@
 
 Nesta sprint a priorização foi a definição da base de dados para a construção da API Restful focando no catálogo de imagem e no armazenamento, além da definição da interface de usuário para o sistema de visualização Web GIS focando no map tile engine e no recorte e download das imagens.
 
+<p align = "center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rAHZIuZ5mDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 > **Descrição:**
 
 - Entrega da definição da base de dados a ser utilizada pelo sistema inteligente como catálogo de imagens;
@@ -28,6 +32,10 @@ Empreendedorismo                                |[Canvas](https://drive.google.c
 ## Sprint 2 (2020 - 05 - 15)
 
 Para esta sprint propomos o desenvolvimento da configuração inicial do sistema inteligente para a identificação de propriedades nas imagens de cobertura de terra capturadas pelo satélite Sentinel e Landsat priorizando a definição de máscaras.
+
+<p align = "center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/rAHZIuZ5mDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 > **Descrição:**
 
@@ -57,6 +65,10 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 ## Sprint 3 (2020 - 05 - 29)
 
 Na sprint 3 com a base de dados definida foi efetuado alguns testes com os modelos do TensorFlow usando um misto de imagens do Sentinel e Landsat para enriquecer os dados de treinamento e validação da IA, também foi desenvolvida na API Restful uma busca com polígonos no banco de dados geográfico e a integração com o Web GIS utilizando dados em mock.
+
+<p align = "center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/9SIevuyPPh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
 
 > **Descrição:**
 
