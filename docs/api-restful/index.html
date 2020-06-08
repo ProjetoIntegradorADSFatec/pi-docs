@@ -218,25 +218,22 @@ $ docker run --name spring-api-restful -p 4040:8080 -d spring-restful
 <p>Após o comando <code>docker run</code> digite o seguinte <code>docker ps</code> para listar os serviços  em execução pelo seu docker instalado, a resposta deve ser a seguinte:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>$ docker ps
-CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                            NAMES
-a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app.jar&quot;</span>     <span class="m">25</span> hours ago        Up <span class="m">25</span> hours         <span class="m">0</span>.0.0.0:4040-&gt;8080/tcp           spring-api-restful
+CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                              NAMES
+20b1962dad83        spring-restful         <span class="s2">&quot;java -jar /app.jar&quot;</span>     <span class="m">3</span> minutes ago       Up <span class="m">3</span> minutes        <span class="m">0</span>.0.0.0:4040-&gt;8080/tcp             spring-api-restful
 </code></pre></div>
 
 
 <blockquote>
-<p>Em seu navegador digite o seguinte link <code>localhost:8080/catalog/list</code>.</p>
+<p>Em seu navegador digite o seguinte link <code>localhost:4040/catalog/list</code>.</p>
 </blockquote>
 <h1 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h1>
 <blockquote>
 <p><strong>Listagem:</strong> lista todas as imagens cadastradas no banco de dados PostgreSQL por método GET:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>GET localhost:8080/catalog/list
+<div class="codehilite"><pre><span></span><code>GET localhost:4040/catalog/list
 </code></pre></div>
 
 
-<blockquote>
-<p>Response:</p>
-</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">[</span>
     <span class="p">{</span>
         <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
@@ -267,15 +264,12 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
 
 
 <blockquote>
-<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados PostgreSQL, método POST:</p>
+<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>POST localhost:8080/catalog/add
+<div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/add
 </code></pre></div>
 
 
-<blockquote>
-<p><em>Body</em> para a requisição:</p>
-</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db&quot;</span><span class="p">,</span>
     <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span><span class="p">,</span>
@@ -299,15 +293,12 @@ a06cb1ccf107        spring-restful         <span class="s2">&quot;java -jar /app
 
 
 <blockquote>
-<p><strong>Busca de imagens:</strong> busca de imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a>, em concordãncia aos atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL,  método POST:</p>
+<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST:</p>
 </blockquote>
-<div class="codehilite"><pre><span></span><code>POST localhost:8080/catalog/search
+<div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/search
 </code></pre></div>
 
 
-<blockquote>
-<p><em>Body</em> para a requisição:</p>
-</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;dateTime&quot;</span> <span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
   <span class="nt">&quot;band&quot;</span> <span class="p">:</span> <span class="s2">&quot;VV&quot;</span><span class="p">,</span>
