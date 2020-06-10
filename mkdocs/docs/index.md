@@ -29,7 +29,7 @@ Desenvolver um Sistema inteligente para a identificação automática de Talhõe
 ## Implementação
 
 <p align = "center">
-  <img src = "../assets/estrutura_do_software.png">
+  <img src = "./assets/estrutura_do_software.png">
 </p>
 
 Como implementar? Tecnologias. Plataformas. Ferramentas.
