@@ -102,6 +102,11 @@ Para esta sprint será proposto a criação e o treinamento do modelo para a ide
 
 Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful.
 
-## Sprint Final (2020 - 07 - 10)
+## Sprint 6 (2020 - 07 - 10)
 
 Testes com a aplicação em funcionamento utilizando servidores em nuvem.
+
+## Contato para Dúvidas
+
+- **[abner.anjos@fatec.sp.gov.br](#contato-para-duvida)** (Abner Ernâni dos Anjos)
+- **[joao.freitas15@fatec.sp.gov.br](#contato-para-duvida)** (João de Freitas)

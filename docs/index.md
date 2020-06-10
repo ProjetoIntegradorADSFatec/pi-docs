@@ -21,12 +21,16 @@ Desenvolver um Sistema inteligente para a identificação automática de Talhõe
 ## Integrantes do Grupo
 
 - Tábata Glória (Scrum Master - SM)
-- Joâo de Freitas (Project Owner - PO)
-- Guilherme Gomes (Back end Developer - DEV)
+- Abner Ernâni dos Anjos (Product Owner - PO)
+- João de Freitas (Developer - DEV)
 - João Arruda (Front end Developer - DEV)
-- Abner Ernâni dos Anjos (Full Stack Developer - DEV)
+- Guilherme Gomes (Back end Developer - DEV)
 
 ## Implementação
+
+<p align = "center">
+  <img src = "../assets/estrutura_do_software.png">
+</p>
 
 Como implementar? Tecnologias. Plataformas. Ferramentas.
 
@@ -55,3 +59,8 @@ Para a implementação será necessário a utilização das seguintes tecnologia
 > **Github:** Sistema de controle de versão distribuido e gerenciamento de código-fonte, fornece controle de acesso e vários recursos de colaboração, como rastreamento de erros, solicitações de recursos, gerenciamento de tarefas e wikis para cada projeto.
 
 > **Microsoft TEAM:** Trata-se de um aplicativo de bate-papo em grupo que permite o gerenciamento de diversas conversas em um único ambiente de controle. Foi desenvolvido para facilitar a comunicação e promover a colaboração entre as equipes da empresa/projeto.
+
+## Contato para Dúvidas
+
+- **[abner.anjos@fatec.sp.gov.br](#contato-para-duvida)** (Abner Ernâni dos Anjos)
+- **[joao.freitas15@fatec.sp.gov.br](#contato-para-duvida)** (João de Freitas)
