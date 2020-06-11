@@ -106,9 +106,12 @@ Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint
 
 - Implementação do sistema de tags no repositório do Github, da função de busca por dados espaço temporais e enriquecendo a base de dados com mais imagens do Sentinel-1 como teste para o ambiente de produção da API;
 
-> **Links para as milestones e issues relacionadas à terceira entrega (Sprint 3):**
+- Implementando a busca por dados espaço temporais no Sistema Web GIS com a integração com a API utilizando um menu para a abstração, habilitando o recorte por polígonos e seleção de intervalos de datas;
+
+> **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
 
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/4?closed=1) - implementando buscas com intervalos de datas e GeoJSON's, busca por dados espaço temporais;
+- [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis/milestone/4?closed=1) - integração com a API, implementação da busca por dados espaço temporais e criação do menu para a filtragem das imagens;
 
 > **Tabela de entregas:**
 

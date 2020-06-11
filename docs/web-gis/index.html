@@ -178,6 +178,17 @@ $ docker container run --name app-smh-ui -p 8082:8080 -d web-gis:latest
 
 <p>Este projeto foi gerado utilizando <a href="https://github.com/angular/angular-cli">Angular CLI</a> versão 9+.</p>
 <h2 id="servidor-para-o-ambiente-de-desenvolvimento">Servidor para o ambiente de desenvolvimento<a class="headerlink" href="#servidor-para-o-ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h2>
+<blockquote>
+<p><strong>Obs:.</strong> Não esqueça de modificar o arquivo de configuração do proxy para o servidor da API que for utilizar: <strong><a href="https://github.com/ProjetoIntegradorADSFatec/web-gis/blob/master/proxy.conf.js">proxy.conf.js</a></strong>.</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="c1"># Instalar as dependências</span>
+$ npm install
+
+<span class="c1"># Executar a aplicação</span>
+$ npm start
+</code></pre></div>
+
+
 <p>Executar o seguinte comando <code>ng serve</code> para executar um novo servidor de desenvolvimento. No navegador procure pelo endereço <code>http://localhost:4200/</code>. A aplicação irá realizar a leitura automática de arquivos em conjunto com as alterações implementadas.</p>
 <h2 id="desenvolvimento-de-codigo">Desenvolvimento de código<a class="headerlink" href="#desenvolvimento-de-codigo" title="Permanent link">&para;</a></h2>
 <p>Executar o seguinte comando <code>ng generate component component-name</code> para gerar um novo componente em Linguagem <strong>TypeScript</strong>.</p>
