@@ -106,7 +106,7 @@ Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint
 
 - Implementação do sistema de tags no repositório do Github, da função de busca por dados espaço temporais e enriquecendo a base de dados com mais imagens do Sentinel-1 como teste para o ambiente de produção da API;
 
-- Implementando a busca por dados espaço temporais no Sistema Web GIS com a integração com a API utilizando um menu para a abstração, habilitando o recorte por polígonos e seleção de intervalos de datas;
+- Implementando a busca por dados espaço-temporais no Sistema Web GIS com a integração com a API utilizando um menu para a abstração, habilitando o recorte por polígonos e seleção de intervalos de datas;
 
 > **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
 
