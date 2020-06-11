@@ -53,7 +53,7 @@ $ gradle bootRun
 ```
 
 ## Execução da aplicação em micro serviços
-**Obs.:** Não esqueça de mudar o endereço *`IP (localhost)`* do banco de dados no arquivo *`application.properties`* para o endereço real do servidor PostgreSQL do seu computador.
+**Obs.:** Não esqueça de mudar o endereço *`IP (localhost)`* do banco de dados no arquivo *[`application.properties`](./src/main/resources/application.properties)* para o endereço real do servidor PostgreSQL do seu computador.
 ```
 ## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
@@ -151,7 +151,10 @@ POST localhost:4040/catalog/search
 ```
 ~~~json
 {
-  "dateTime" : "2017-06-12 08:35:46",
+  "dateTime": {
+    "start": "2017-01-01",
+    "end": "2018-12-31"
+  },
   "band" : "VV",
   "geojson" : {
     "type": "FeatureCollection",

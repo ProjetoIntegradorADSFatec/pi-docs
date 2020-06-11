@@ -98,6 +98,24 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 
 Para esta sprint será proposto a criação e o treinamento do modelo para a identificação de talhões assim como a definição das máscaras para as imagens, a integração da API  Restful com o sistema de visualização Web GIS para o download e recorte das imagens sem mock, além da implementação de tags para os repositórios com controle de versões.
 
+<p align = "center">
+    <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+> **Descrição:**
+
+- Implementação do sistema de tags no repositório do Github, além de implementar a função de busca por dados espaço temporais e enriquecendo a base de dados com mais imagens do Sentinel-1 como teste para o ambiente de produção da API;
+
+> **Links para as milestones e issues relacionadas à terceira entrega (Sprint 3):**
+
+- [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/4?closed=1) - implementando buscas com intervalos de datas e GeoJSON's, busca por dados espaço temporais;
+
+> **Tabela de entregas:**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+Gestão de Projetos                              |[Termo de Abertura de Projeto](https://drive.google.com/file/d/1tReGh3QCTdToKIPzhQE5WVe_XXJyVdmw/view?usp=sharing)
+
 ## Sprint 5 (2020 - 06 - 26)
 
 Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful.

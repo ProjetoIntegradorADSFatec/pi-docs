@@ -182,6 +182,13 @@ $ psql -h 0.0.0.0 -p 5480 -U postgres -d shapes -f create-tables.sql
 </code></pre></div>
 
 
+<blockquote>
+<p>O banco de dados de catálogo de imagens criado por essa aplicação possui o seguinte modelo de relações:</p>
+</blockquote>
+<p align = "center">
+  <img width = "300px" src = "../../assets/db-model.png">
+</p>
+
 <h2 id="gerenciamento-do-banco-de-dados">Gerenciamento do Banco de dados<a class="headerlink" href="#gerenciamento-do-banco-de-dados" title="Permanent link">&para;</a></h2>
 <div class="codehilite"><pre><span></span><code>## Entrar no banco de dados digitar a senha cadastrada para entrar
 $ psql -h 0.0.0.0 -p 5480 -U api_restful -d shapes

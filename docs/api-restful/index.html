@@ -195,7 +195,7 @@
 
 
 <h2 id="execucao-da-aplicacao-em-micro-servicos">Execução da aplicação em micro serviços<a class="headerlink" href="#execucao-da-aplicacao-em-micro-servicos" title="Permanent link">&para;</a></h2>
-<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><code>application.properties</code></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
+<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="./src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
 <div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
 
@@ -300,7 +300,10 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;dateTime&quot;</span> <span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="p">{</span>
+    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-01&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-31&quot;</span>
+  <span class="p">},</span>
   <span class="nt">&quot;band&quot;</span> <span class="p">:</span> <span class="s2">&quot;VV&quot;</span><span class="p">,</span>
   <span class="nt">&quot;geojson&quot;</span> <span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
