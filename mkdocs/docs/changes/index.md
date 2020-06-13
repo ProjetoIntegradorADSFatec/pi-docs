@@ -108,8 +108,11 @@ Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint
 
 - Implementando a busca por dados espaço-temporais no Sistema Web GIS com a integração com a API utilizando um menu para a abstração, habilitando o recorte por polígonos e seleção de intervalos de datas;
 
+- Visualização dos dados de aprendizagem na área de inteligência artificial (acurácia) do classificador e testes com o enriquecimento da base de dados da API;
+
 > **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
 
+- [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/3?closed=1) -  visualização de aprendizagem/treino do classificador, aplicação de técnicas de aumento de dados _data augmentation_ a base de arquivos de teste, enriquecimento da base de dados;
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/4?closed=1) - implementando buscas com intervalos de datas e GeoJSON's, busca por dados espaço temporais;
 - [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis/milestone/4?closed=1) - integração com a API, implementação da busca por dados espaço temporais e criação do menu para a filtragem das imagens;
 
@@ -118,6 +121,7 @@ Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
 Gestão de Projetos                              |[Termo de Abertura de Projeto](https://drive.google.com/file/d/1tReGh3QCTdToKIPzhQE5WVe_XXJyVdmw/view?usp=sharing)
+Gestão de Projetos                              |[ATA - Reunião PI ADS](https://drive.google.com/file/d/1ZHm0a2ND1FI8so1HxD-3j7CDrF8SgQfO/view?usp=sharing)
 
 ## Sprint 5 (2020 - 06 - 26)
 
