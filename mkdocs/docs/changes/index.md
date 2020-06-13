@@ -94,7 +94,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 Gestão de Projetos                              |[Checklist](https://drive.google.com/file/d/1DhG1evvVJ8ElfI5vffmCfAvTp5HZgODr/view?usp=sharing)
 Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1NKJestgFaCls9jpd5COr4caw5dta5jSx/view?usp=sharing)
 
-## Sprint 4 (2020 - 06 - 12)
+## Sprint 4 (2020 - 06 - 14)
 
 Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint será proposto a criação e o treinamento do modelo para a identificação de talhões assim como a definição das máscaras para as imagens, a integração da API  Restful com o sistema de visualização Web GIS para o download e recorte das imagens sem mock, além da implementação de tags para os repositórios com controle de versões.
 
@@ -120,8 +120,12 @@ Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
-Gestão de Projetos                              |[Termo de Abertura de Projeto](https://drive.google.com/file/d/1tReGh3QCTdToKIPzhQE5WVe_XXJyVdmw/view?usp=sharing)
 Gestão de Projetos                              |[ATA - Reunião PI ADS](https://drive.google.com/file/d/1ZHm0a2ND1FI8so1HxD-3j7CDrF8SgQfO/view?usp=sharing)
+Gestão de Projetos                              |[Termo de Abertura de Projeto](https://drive.google.com/file/d/1_Hv6c7Dy05Vef0e4lCzeclr4_LvRqiwW/view?usp=sharing)
+Gestão de Projetos                              |[Matriz RACI](https://drive.google.com/file/d/1IzpYUEg4teVWVtNwjXebVFEqonOK1s_a/view?usp=sharing)
+Gestão de Projetos                              |[Matriz das Comunicações](https://drive.google.com/file/d/1R8SdeN8xL2DbQIA10LwtHIB9U2G5DMJC/view?usp=sharing)
+Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1NLQOZwKOsO3yfVN64Abwb3kCgrOPcAQQ/view?usp=sharing)
+Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITIL](https://drive.google.com/file/d/1J8S-2Pydf_M-l_vKJbBwfAz5fAEyFntD/view?usp=sharing)
 
 ## Sprint 5 (2020 - 06 - 26)
 
