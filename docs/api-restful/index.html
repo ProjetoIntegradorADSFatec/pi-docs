@@ -195,7 +195,7 @@
 
 
 <h2 id="execucao-da-aplicacao-em-micro-servicos">Execução da aplicação em micro serviços<a class="headerlink" href="#execucao-da-aplicacao-em-micro-servicos" title="Permanent link">&para;</a></h2>
-<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/blob/master/src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
+<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="./src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
 <div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
 
@@ -234,37 +234,58 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="p">[</span>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
-        <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-        <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;band&quot;</span><span class="p">:</span> <span class="s2">&quot;VH&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-06-12 08:35:46&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
+      <span class="nt">&quot;assets&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span>
+          <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;VH&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;href&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.dpi.inpe.br/obt/agricultural-database/lem/dados/cenas/Sentinel1/20180408_S1A/clip_20180408T083549_Sigma0_VH_db.tif&quot;</span>
+        <span class="p">}</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;bbox&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="mf">-45.8734130859375</span><span class="p">,</span>
+        <span class="mf">-12.042006714207925</span><span class="p">,</span>
+        <span class="mf">-45.7415771484375</span><span class="p">,</span>
+        <span class="mf">-12.224602049269444</span>
+      <span class="p">],</span>
+      <span class="nt">&quot;collection&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20180408T083549_Sigma0_VH_db.tif&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
         <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">1</span><span class="p">,</span>
-                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.042006714207925</span><span class="p">,</span>
-                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.8734130859375</span><span class="p">,</span>
-                <span class="nt">&quot;catalog&quot;</span><span class="p">:</span> <span class="kc">null</span>
-            <span class="p">},</span>
-            <span class="p">{</span>
-                <span class="nt">&quot;id&quot;</span><span class="p">:</span> <span class="mi">2</span><span class="p">,</span>
-                <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
-                <span class="nt">&quot;latitude&quot;</span><span class="p">:</span> <span class="mf">-12.224602049269444</span><span class="p">,</span>
-                <span class="nt">&quot;longitude&quot;</span><span class="p">:</span> <span class="mf">-45.7415771484375</span><span class="p">,</span>
-                <span class="nt">&quot;catalog&quot;</span><span class="p">:</span> <span class="kc">null</span>
-            <span class="p">}</span>
-        <span class="p">],</span>
-        <span class="nt">&quot;image&quot;</span><span class="p">:</span> <span class="s2">&quot;http://www.dpi.inpe.br/agricultural-database/lem/dados/cenas/Sentinel1/20170612_S1A/clip_20170612T083546_Sigma0_VH_db.tif&quot;</span>
+          <span class="p">[</span>
+            <span class="p">[</span>
+              <span class="mf">-12.042006714207925</span><span class="p">,</span>
+              <span class="mf">-45.8734130859375</span>
+            <span class="p">],</span>
+            <span class="p">[</span>
+              <span class="mf">-12.224602049269444</span><span class="p">,</span>
+              <span class="mf">-45.7415771484375</span>
+            <span class="p">]</span>
+          <span class="p">]</span>
+        <span class="p">]</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;band&quot;</span><span class="p">:</span> <span class="s2">&quot;VH&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;datetime&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-01-08T02:04:00.000+0000&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-01-08T02:04:00.000+0000&quot;</span>
+        <span class="p">}</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span>
     <span class="p">}</span>
-<span class="p">]</span>
+  <span class="p">],</span>
+  <span class="nt">&quot;numberMatched&quot;</span><span class="p">:</span> <span class="mi">17</span><span class="p">,</span>
+  <span class="nt">&quot;numberReturned&quot;</span><span class="p">:</span> <span class="mi">19</span><span class="p">,</span>
+  <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span>
+<span class="p">}</span>
 </code></pre></div>
 
 
 <blockquote>
-<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST:</p>
+<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/add
 </code></pre></div>
@@ -293,38 +314,37 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <blockquote>
-<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST:</p>
+<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/search
 </code></pre></div>
 
 
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="p">{</span>
-    <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-01-01&quot;</span><span class="p">,</span>
-    <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2018-12-31&quot;</span>
-  <span class="p">},</span>
-  <span class="nt">&quot;band&quot;</span> <span class="p">:</span> <span class="s2">&quot;VV&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;geojson&quot;</span> <span class="p">:</span> <span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
     <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
       <span class="p">{</span>
-        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
-        <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{},</span>
-        <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
-          <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
-          <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[[</span>
-              <span class="p">[</span>
-                <span class="mf">-47.3016357421875</span><span class="p">,</span>
-                <span class="mf">-11.248449735768247</span>
-              <span class="p">],</span>
-              <span class="err">...</span>
-            <span class="p">]</span>
-          <span class="p">]</span>
-        <span class="p">}</span>
+      <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Feature&quot;</span><span class="p">,</span>
+      <span class="nt">&quot;properties&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;dateTime&quot;</span><span class="p">:</span> <span class="p">{</span>
+          <span class="nt">&quot;start&quot;</span><span class="p">:</span> <span class="s2">&quot;2010-01-01&quot;</span><span class="p">,</span>
+          <span class="nt">&quot;end&quot;</span><span class="p">:</span> <span class="s2">&quot;2017-12-31&quot;</span>
+        <span class="p">},</span>
+        <span class="nt">&quot;band&quot;</span><span class="p">:</span> <span class="s2">&quot;VV&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;projection&quot;</span><span class="p">:</span> <span class="s2">&quot;EPSG:4326&quot;</span>
+      <span class="p">},</span>
+      <span class="nt">&quot;geometry&quot;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;Polygon&quot;</span><span class="p">,</span>
+        <span class="nt">&quot;coordinates&quot;</span><span class="p">:</span> <span class="p">[[</span>
+          <span class="p">[</span>
+          <span class="mf">-47.02148437499999</span><span class="p">,</span>
+          <span class="mf">-10.790140750321738</span>
+          <span class="p">],</span>
+          <span class="err">...</span>
+        <span class="p">]]</span>
       <span class="p">}</span>
+    <span class="p">}</span>
     <span class="p">]</span>
-  <span class="p">}</span>
 <span class="p">}</span>
 </code></pre></div>
 
