@@ -132,7 +132,25 @@ Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITI
 
 ## Sprint 5 (2020 - 06 - 26)
 
-Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful.
+Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC) e a visualização concreta dos Talhões no Web GIS.
+
+<p align = "center">
+    <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
+> **Descrição:**
+
+- Realizamos alguns testes envolvendo o modelo criado pelo sistema inteligente com algumas imagens do Sentinel-1 e Landsat para o reconhecimento de propriedades de cobertura de terra;
+
+> **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
+
+- [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/4?closed=1) - testes no modelo criado utilizando a base de dados enriquecida da API;
+
+> **Tabela de entregas:**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------
+                                                |
 
 ## Sprint 6 (2020 - 07 - 10)
 

@@ -127,6 +127,10 @@
 <a href="https://www.python.org/"><img alt="Python" src="https://img.shields.io/badge/python-3.8-green" /></a>
 <a href="https://www.tensorflow.org/"><img alt="Tensorflow" src="https://img.shields.io/badge/tensorflow-2.1-green" /></a>
 <a href="https://jupyter.org/"><img alt="JupyterLab" src="https://img.shields.io/badge/jupyter-1.0-green" /></a></p>
+<p align = "center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/sMWTXzVSrQI" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 <p>O sistema deve reconhecer áreas de talhões (unidade mínima de cultivo de uma propriedade) em um mapa, utilizando dados multitemporais, através de inteligência artificial, a interface gráfica (Web GIS), deve permitir ao usuário selecionar um intervalo de tempo e as imagens de um catálogo disponível para a região selecionada, carregando-as em bloco para não sobrecarregar o sistema e ter opção para download.</p>
 <p>Web GIS (Web Geographic Information System): Portal de um “Sistema de Informação Geográfica” (SIG), baseado em padrão de serviços web OGC, fornecendo uma estrutura para visualização e navegação de mapas (basemaps) e de dados geográficos vetoriais e matriciais.</p>
 <ul>
@@ -227,10 +231,12 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code><span class="c1"># !pip install tensorflow numpy matplotlib pillow wget rasterio geopandas</span>
+<div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">pip</span> <span class="n">install</span> <span class="n">tensorflow</span> <span class="n">numpy</span> <span class="n">matplotlib</span> <span class="n">pillow</span> <span class="n">wget</span> <span class="n">rasterio</span> <span class="n">geopandas</span>
 </code></pre></div>
 
 
+<h3 id="importacao-das-bibliotecas">Importação das bibliotecas<a class="headerlink" href="#importacao-das-bibliotecas" title="Permanent link">&para;</a></h3>
+<p>Importando as bibliotecas necessárias para a criação do modelo utilizando o <em>tensorflow</em> e o <em>keras</em>.</p>
 <div class="codehilite"><pre><span></span><code><span class="kn">import</span> <span class="nn">os</span>
 </code></pre></div>
 
@@ -241,10 +247,12 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 
 <div class="codehilite"><pre><span></span><code><span class="kn">from</span> <span class="nn">tensorflow.keras.models</span> <span class="kn">import</span> <span class="n">Sequential</span>
 <span class="kn">from</span> <span class="nn">tensorflow.keras.layers</span> <span class="kn">import</span> <span class="n">Dense</span><span class="p">,</span> <span class="n">Conv2D</span><span class="p">,</span> <span class="n">Flatten</span><span class="p">,</span> <span class="n">Dropout</span><span class="p">,</span> <span class="n">MaxPooling2D</span>
+<span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing</span> <span class="kn">import</span> <span class="n">image</span>
 <span class="kn">from</span> <span class="nn">tensorflow.keras.preprocessing.image</span> <span class="kn">import</span> <span class="n">ImageDataGenerator</span>
 
 <span class="kn">import</span> <span class="nn">numpy</span> <span class="k">as</span> <span class="nn">np</span>
 <span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+<span class="kn">import</span> <span class="nn">matplotlib.image</span> <span class="k">as</span> <span class="nn">mpimg</span>
 </code></pre></div>
 
 
@@ -254,6 +262,9 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 </code></pre></div>
 
 
+<h3 id="recuperacao-de-imagens">Recuperação de imagens<a class="headerlink" href="#recuperacao-de-imagens" title="Permanent link">&para;</a></h3>
+<p>Utilizando a abstração criada <a href="./https://github.com/ProjetoIntegradorADSFatec/python-cnn/blob/master/services/georasters.py"><em>Georaster</em></a> para recuperar imagens de sensoriamento remoto do servidor <em>FTP</em> do INPE com o Sentinel-1.</p>
+<p>Identificando as principais propriedades das imagens e conhecendo os dados antes do pocessamento.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">data</span> <span class="o">=</span> <span class="n">Georaster</span><span class="p">(</span><span class="s1">&#39;2017-06-12 08h:35m:46s&#39;</span><span class="p">,</span><span class="s1">&#39;vh&#39;</span><span class="p">,</span> <span class="mi">4326</span><span class="p">)</span>
 </code></pre></div>
 
@@ -309,7 +320,7 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 
 
 <p align = "center">
-  <img width = "600px" src = "../assets/output_12_0.png">
+  <img width = "600px" src = "../assets/output_14_0.png">
 </p>
 
 <div class="codehilite"><pre><span></span><code><span class="k">for</span> <span class="n">coords</span> <span class="ow">in</span> <span class="n">data</span><span class="o">.</span><span class="n">geom</span><span class="o">.</span><span class="n">get</span><span class="p">(</span><span class="s1">&#39;coordinates&#39;</span><span class="p">):</span>
@@ -349,7 +360,7 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 
 
 <p align = "left">
-  <img width = "50px" src = "../assets/output_16_0.svg">
+  <img width = "60px" src = "../assets/output_18_0.svg">
 </p>
 
 <div class="codehilite"><pre><span></span><code><span class="n">data</span><span class="o">.</span><span class="n">geom</span>
@@ -561,6 +572,8 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 </table>
 </div>
 
+<h3 id="visualizando-os-dados">Visualizando os dados<a class="headerlink" href="#visualizando-os-dados" title="Permanent link">&para;</a></h3>
+<p>Visualizando os dados de entrada para a identificação dos talhões em uma imagen georreferenciada.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">lem</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
 </code></pre></div>
 
@@ -570,7 +583,7 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 
 
 <p align = "center">
-  <img width = "600px" src = "../assets/output_20_1.png">
+  <img width = "600px" src = "../assets/output_23_1.png">
 </p>
 
 <div class="codehilite"><pre><span></span><code><span class="n">shapes</span><span class="o">.</span><span class="n">covers</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">color</span> <span class="o">=</span> <span class="s1">&#39;white&#39;</span><span class="p">,</span> <span class="n">edgecolor</span> <span class="o">=</span> <span class="s1">&#39;black&#39;</span><span class="p">,</span> <span class="n">figsize</span> <span class="o">=</span> <span class="p">(</span><span class="mi">8</span><span class="p">,</span> <span class="mi">8</span><span class="p">))</span>
@@ -582,9 +595,11 @@ $ docker run --name jupyter-python-cnn-docker -p 8890:8888 -d jupyter-python-cnn
 
 
 <p align = "center">
-  <img width = "600px" src = "../assets/output_21_1.png">
+  <img width = "600px" src = "../assets/output_24_1.png">
 </p>
 
+<h3 id="convertendo-as-imagens">Convertendo as imagens<a class="headerlink" href="#convertendo-as-imagens" title="Permanent link">&para;</a></h3>
+<p>Convertendo as imagens em um formato <em>jpg</em> para ser consumido pelo treinamento do modelo.</p>
 <div class="codehilite"><pre><span></span><code><span class="err">!</span><span class="n">ls</span> <span class="o">-</span><span class="n">l</span> <span class="n">data</span><span class="o">/</span><span class="nb">input</span><span class="o">/</span><span class="n">train</span><span class="o">/</span><span class="n">true</span>
 </code></pre></div>
 
@@ -954,6 +969,8 @@ Converted Image 14
 </code></pre></div>
 
 
+<h3 id="iniciando-as-variaveis-para-a-criacao-do-modelo">Iniciando as variáveis para a criação do modelo<a class="headerlink" href="#iniciando-as-variaveis-para-a-criacao-do-modelo" title="Permanent link">&para;</a></h3>
+<p>Iniciando as variáveis para a identificação dos dados de treinamento e validação.</p>
 <div class="codehilite"><pre><span></span><code><span class="n">train_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="s1">&#39;train&#39;</span><span class="p">)</span>
 <span class="n">validation_dir</span> <span class="o">=</span> <span class="n">os</span><span class="o">.</span><span class="n">path</span><span class="o">.</span><span class="n">join</span><span class="p">(</span><span class="n">PATH</span><span class="p">,</span> <span class="s1">&#39;validation&#39;</span><span class="p">)</span>
 </code></pre></div>
@@ -977,6 +994,7 @@ Converted Image 14
 </code></pre></div>
 
 
+<p>Entendendo os dados e calculando os items da base de dados.</p>
 <div class="codehilite"><pre><span></span><code><span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training false images:&#39;</span><span class="p">,</span> <span class="n">num_false_tr</span><span class="p">)</span>
 <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;total training true images:&#39;</span><span class="p">,</span> <span class="n">num_true_tr</span><span class="p">)</span>
 
@@ -1072,23 +1090,11 @@ Total validation images: 69
 
 
 <p align = "center">
-  <img src = "../assets/output_42_0.png">
-</p>
-
-<div class="codehilite"><pre><span></span><code><span class="n">augmented_images</span> <span class="o">=</span> <span class="p">[</span><span class="n">train_data_gen</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">][</span><span class="mi">1</span><span class="p">]</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">)]</span>
-</code></pre></div>
-
-
-<div class="codehilite"><pre><span></span><code><span class="n">plotImages</span><span class="p">(</span><span class="n">augmented_images</span><span class="p">)</span>
-</code></pre></div>
-
-
-<p align = "center">
-  <img src = "../assets/output_44_0.png">
+  <img width = "800px" src = "../assets/output_48_0.png">
 </p>
 
 <div class="codehilite"><pre><span></span><code><span class="n">model</span> <span class="o">=</span> <span class="n">Sequential</span><span class="p">([</span>
-    <span class="n">Conv2D</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span> <span class="p">,</span><span class="mi">3</span><span class="p">)),</span>
+    <span class="n">Conv2D</span><span class="p">(</span><span class="mi">16</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">,</span> <span class="n">input_shape</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">,</span> <span class="mi">3</span><span class="p">)),</span>
     <span class="n">MaxPooling2D</span><span class="p">(),</span>
     <span class="n">Dropout</span><span class="p">(</span><span class="mf">0.2</span><span class="p">),</span>
     <span class="n">Conv2D</span><span class="p">(</span><span class="mi">32</span><span class="p">,</span> <span class="mi">3</span><span class="p">,</span> <span class="n">padding</span><span class="o">=</span><span class="s1">&#39;same&#39;</span><span class="p">,</span> <span class="n">activation</span><span class="o">=</span><span class="s1">&#39;relu&#39;</span><span class="p">),</span>
@@ -1153,7 +1159,7 @@ _________________________________________________________________
 
 <div class="codehilite"><pre><span></span><code><span class="n">history</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">fit_generator</span><span class="p">(</span>
     <span class="n">train_data_gen</span><span class="p">,</span>
-    <span class="n">steps_per_epoch</span><span class="o">=</span><span class="n">total_val</span> <span class="o">//</span> <span class="n">batch_size</span><span class="p">,</span>  <span class="c1"># total_train</span>
+    <span class="n">steps_per_epoch</span><span class="o">=</span><span class="mi">3</span><span class="p">,</span>  <span class="c1"># total_train</span>
     <span class="n">epochs</span><span class="o">=</span><span class="n">epochs</span><span class="p">,</span>
     <span class="n">validation_data</span><span class="o">=</span><span class="n">val_data_gen</span><span class="p">,</span>
     <span class="n">validation_steps</span><span class="o">=</span><span class="n">total_val</span> <span class="o">//</span> <span class="n">batch_size</span>
@@ -1161,17 +1167,18 @@ _________________________________________________________________
 </code></pre></div>
 
 
-<div class="codehilite"><pre><span></span><code>WARNING:tensorflow:From &lt;ipython-input-48-bc7c196dd375&gt;:6: Model.fit_generator (from tensorflow.python.keras.engine.training) is deprecated and will be removed in a future version.
-Instructions for updating:
-Please use Model.fit, which supports generators.
-Epoch 1/4
-4/4 [==============================] - 153s 38s/step - loss: 1.3653 - accuracy: 0.6000 - val_loss: 0.1966 - val_accuracy: 0.0000e+00
+<div class="codehilite"><pre><span></span><code>Epoch 1/4
+3/3 [==============================] - ETA: 0s - loss: 0.4429 - accuracy: 0.8667 WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 6 batches). You may need to use the repeat() function when building your dataset.
+3/3 [==============================] - 123s 41s/step - loss: 0.4429 - accuracy: 0.8667 - val_loss: 0.6512 - val_accuracy: 0.0000e+00
 Epoch 2/4
-4/4 [==============================] - 144s 36s/step - loss: 0.6799 - accuracy: 0.5250 - val_loss: 1.2178 - val_accuracy: 0.0000e+00
+3/3 [==============================] - ETA: 0s - loss: 0.5144 - accuracy: 0.7667WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 6 batches). You may need to use the repeat() function when building your dataset.
+3/3 [==============================] - 114s 38s/step - loss: 0.5144 - accuracy: 0.7667 - val_loss: 0.5831 - val_accuracy: 0.0000e+00
 Epoch 3/4
-4/4 [==============================] - 151s 38s/step - loss: 0.5490 - accuracy: 0.5500 - val_loss: 1.1076 - val_accuracy: 0.0000e+00
+3/3 [==============================] - ETA: 0s - loss: 0.5342 - accuracy: 0.7333WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 6 batches). You may need to use the repeat() function when building your dataset.
+3/3 [==============================] - 94s 31s/step - loss: 0.5342 - accuracy: 0.7333 - val_loss: 0.2178 - val_accuracy: 0.0000e+00
 Epoch 4/4
-4/4 [==============================] - 158s 40s/step - loss: 0.5802 - accuracy: 0.6000 - val_loss: 0.8831 - val_accuracy: 0.0000e+00
+3/3 [==============================] - ETA: 0s - loss: 0.3281 - accuracy: 0.8667WARNING:tensorflow:Your input ran out of data; interrupting training. Make sure that your dataset or generator can generate at least `steps_per_epoch * epochs` batches (in this case, 6 batches). You may need to use the repeat() function when building your dataset.
+3/3 [==============================] - 111s 37s/step - loss: 0.3281 - accuracy: 0.8667 - val_loss: 0.4230 - val_accuracy: 0.0000e+00
 </code></pre></div>
 
 
@@ -1200,7 +1207,7 @@ Epoch 4/4
 
 
 <p align = "center">
-  <img src = "../assets/output_51_1.png">
+  <img width = "200px" src = "../assets/output_55_1.png">
 </p>
 
 <div class="codehilite"><pre><span></span><code><span class="n">plt</span><span class="o">.</span><span class="n">subplot</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
@@ -1213,10 +1220,40 @@ Epoch 4/4
 
 
 <p align = "center">
-  <img src = "../assets/output_52_0.png">
+  <img width = "200px" src = "../assets/output_56_0.png">
 </p>
 
-<div class="codehilite"><pre><span></span><code>
+<h3 id="iniciando-os-testes-com-o-modelo">Iniciando os testes com o modelo<a class="headerlink" href="#iniciando-os-testes-com-o-modelo" title="Permanent link">&para;</a></h3>
+<p>Testes com o modelo criado anteriormente para a identificação de talhões.</p>
+<div class="codehilite"><pre><span></span><code><span class="n">teste</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">load_img</span><span class="p">(</span><span class="s1">&#39;data/manual_test/image14.jpg&#39;</span><span class="p">,</span> <span class="n">target_size</span><span class="o">=</span><span class="p">(</span><span class="n">IMG_HEIGHT</span><span class="p">,</span> <span class="n">IMG_WIDTH</span><span class="p">))</span>
+<span class="n">teste</span> <span class="o">=</span> <span class="n">image</span><span class="o">.</span><span class="n">img_to_array</span><span class="p">(</span><span class="n">teste</span><span class="p">)</span>
+<span class="n">teste</span> <span class="o">=</span> <span class="n">np</span><span class="o">.</span><span class="n">expand_dims</span><span class="p">(</span><span class="n">teste</span><span class="p">,</span> <span class="n">axis</span><span class="o">=</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">resultado</span> <span class="o">=</span> <span class="n">model</span><span class="o">.</span><span class="n">predict</span><span class="p">(</span><span class="n">teste</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">imshow</span><span class="p">(</span><span class="n">mpimg</span><span class="o">.</span><span class="n">imread</span><span class="p">(</span><span class="s1">&#39;data/manual_test/image14.jpg&#39;</span><span class="p">))</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&lt;matplotlib.image.AxesImage at 0x7f959c45dc88&gt;
+</code></pre></div>
+
+
+<p align = "center">
+  <img width = "200px" src = "../assets/output_58_1.png">
+</p>
+
+<div class="codehilite"><pre><span></span><code><span class="s1">&#39;Sim&#39;</span> <span class="k">if</span> <span class="n">resultado</span><span class="p">[</span><span class="mi">0</span><span class="p">][</span><span class="mi">0</span><span class="p">]</span> <span class="o">==</span> <span class="mi">1</span> <span class="k">else</span> <span class="s1">&#39;Não&#39;</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>&#39;Não&#39;
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code><span class="n">train_data_gen</span><span class="o">.</span><span class="n">class_indices</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>{&#39;false&#39;: 0, &#39;true&#39;: 1}
 </code></pre></div></div>
             </div>
         </div>
