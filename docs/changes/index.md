@@ -142,9 +142,13 @@ Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálo
 
 - Realizamos alguns testes envolvendo o modelo criado pelo sistema inteligente com algumas imagens do Sentinel-1 e Landsat para o reconhecimento de propriedades de cobertura de terra;
 
+- Para o catálogo de imagens realizamos uma revisão dos metadados utilizando os parâmetros, os requisitos e a especificação do [_Spatial Temporal Asset Catalog (STAC)_](https://stacspec.org/) para o armazenamento das imagens no Banco de dados Geográfico PostGIS;
+
 > **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/4?closed=1) - testes no modelo criado utilizando a base de dados enriquecida da API;
+
+- [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/5?closed=1) - entrega da especificação da API seguindo os parâmetros do _STAC_;
 
 > **Tabela de entregas:**
 
