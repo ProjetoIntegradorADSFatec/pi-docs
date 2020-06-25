@@ -135,19 +135,21 @@ $ docker run -d -p 8686:8080 --name geoserver -e STABLE_EXTENSIONS=charts-plugin
 
 
 <h1 id="postagem-das-camadas">Postagem das camadas<a class="headerlink" href="#postagem-das-camadas" title="Permanent link">&para;</a></h1>
-<div class="codehilite"><pre><span></span><code>## Camadas necessárias para a execução
-
-    TODO
-</code></pre></div>
-
-
-<p>Verificar se o sistema encontra em execução no endereço <a href="https://localhost:8686/geoserver"><code>localhost:8686/geoserver</code></a> e a página de administração do geoserver deverá ser exibida.</p>
-<p>A credencial padrão do GeoServer é a seguinte:
-  - <em>Usuário:</em> admin
-  - <em>Senha:</em> geoserver</p>
+<p>Verificar se o sistema encontra em execução no endereço <a href="http://0.0.0.0:8686/geoserver/web/"><code>localhost:8686/geoserver</code></a> e a página de administração do geoserver deverá ser exibida.</p>
+<p>A credencial padrão do GeoServer é a seguinte:</p>
+<ul>
+<li><em>Usuário:</em> admin</li>
+<li><em>Senha:</em> geoserver</li>
+</ul>
 <p align = "center">
   <img width = "600px" src = "../../assets/geoserver-print.png">
-</p></div>
+</p>
+
+<p>Camadas necessárias para a execução:</p>
+<ul>
+<li><strong><a href="https://docs.geoserver.org/stable/en/user/data/raster/geotiff.html">Postagem de camadas em Geotiff</a></strong>: postagem das camadas das imagens de sensoriamento remoto do servidor FTP do INPE com os satélites Landsat e Sentinel-1;</li>
+<li><strong><a href="https://www.google.com/url?q=https://docs.geoserver.org/stable/en/user/gettingstarted/shapefile-quickstart/index.html&amp;sa=D&amp;source=calendar&amp;usd=2&amp;usg=AOvVaw2oUDSmd3w1dZlnpITE-sHy">Postagem de Geometrias</a></strong>: postagem das geometrias relacionadas a definição de talhões como resultado do sistema inteligente <a href="https://github.com/ProjetoIntegradorADSFatec/python-cnn">PythonCNN</a>.</li>
+</ul></div>
             </div>
         </div>
 
