@@ -132,7 +132,7 @@ Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITI
 
 ## Sprint 5 (2020 - 06 - 27)
 
-**Entrega da Primeira versão do Catálogo de Imagens**. Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC) e a visualização concreta dos Talhões no Web GIS.
+**Entrega da Primeira versão do Catálogo de Imagens**. Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC).
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mK4gHb4wKPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
