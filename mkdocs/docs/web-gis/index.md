@@ -6,9 +6,13 @@
 [![Angular](https://img.shields.io/badge/angular-7.2.2-green)](https://angular.io/)
 [![Openlayers](https://img.shields.io/badge/openlayers-6.3.1-green)](https://openlayers.org/)
 
+<p align = "center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/v5aXpHkJvT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 Sistema Web GIS para a visualização de talhões com dados espaço-temporais, permitindo o recorte e buscas de áreas de interesse por extensivo uso da biblioteca [*Openlayers*](https://openlayers.org/).
 
-Para a execução desta aplicação ao é necessário ter o projeto [API Restful](https://github.com/ProjetoIntegradorADSFatec/api-restful) em execução utilizando Docker ou o ambiente de desenvolvimento.
+Para a execução desta aplicação ao é necessário ter o projeto [API Restful](../api-restful) em execução utilizando Docker ou o ambiente de desenvolvimento.
 
 ## Execução para o ambiente de micro serviços em Docker
 > **Obs.:** Necessária instalação do *Node 10+* e *Angular CLI 9+*, não esqueça de modificar o ip do serviço de cache em `app/services/cache-system.ts`.
@@ -40,7 +44,7 @@ Este projeto foi gerado utilizando [Angular CLI](https://github.com/angular/angu
 
 ## Servidor para o ambiente de desenvolvimento
 
-> **Obs.:** Não esqueça de modificar o arquivo de configuração do proxy para o servidor da API que for utilizar: **[proxy.conf.js](./proxy.conf.js)**.
+> **Obs.:** Não esqueça de modificar o arquivo de configuração do proxy para o servidor da API que for utilizar: **[proxy.conf.js](https://github.com/ProjetoIntegradorADSFatec/web-gis/blob/master/proxy.conf.js)**.
 
 ~~~shell
 # Instalar as dependências

@@ -144,8 +144,12 @@
 <a href="https://www.typescriptlang.org/"><img alt="TypeScript" src="https://img.shields.io/badge/typescript-latest-green" /></a>
 <a href="https://angular.io/"><img alt="Angular" src="https://img.shields.io/badge/angular-7.2.2-green" /></a>
 <a href="https://openlayers.org/"><img alt="Openlayers" src="https://img.shields.io/badge/openlayers-6.3.1-green" /></a></p>
+<p align = "center">
+  <iframe width="560" height="315" src="https://www.youtube.com/embed/v5aXpHkJvT8" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</p>
+
 <p>Sistema Web GIS para a visualização de talhões com dados espaço-temporais, permitindo o recorte e buscas de áreas de interesse por extensivo uso da biblioteca <a href="https://openlayers.org/"><em>Openlayers</em></a>.</p>
-<p>Para a execução desta aplicação ao é necessário ter o projeto <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful">API Restful</a> em execução utilizando Docker ou o ambiente de desenvolvimento.</p>
+<p>Para a execução desta aplicação ao é necessário ter o projeto <a href="../api-restful">API Restful</a> em execução utilizando Docker ou o ambiente de desenvolvimento.</p>
 <h2 id="execucao-para-o-ambiente-de-micro-servicos-em-docker">Execução para o ambiente de micro serviços em Docker<a class="headerlink" href="#execucao-para-o-ambiente-de-micro-servicos-em-docker" title="Permanent link">&para;</a></h2>
 <blockquote>
 <p><strong>Obs.:</strong> Necessária instalação do <em>Node 10+</em> e <em>Angular CLI 9+</em>, não esqueça de modificar o ip do serviço de cache em <code>app/services/cache-system.ts</code>.</p>
@@ -179,7 +183,7 @@ $ docker container run --name app-smh-ui -p 8082:8080 -d web-gis:latest
 <p>Este projeto foi gerado utilizando <a href="https://github.com/angular/angular-cli">Angular CLI</a> versão 9+.</p>
 <h2 id="servidor-para-o-ambiente-de-desenvolvimento">Servidor para o ambiente de desenvolvimento<a class="headerlink" href="#servidor-para-o-ambiente-de-desenvolvimento" title="Permanent link">&para;</a></h2>
 <blockquote>
-<p><strong>Obs.:</strong> Não esqueça de modificar o arquivo de configuração do proxy para o servidor da API que for utilizar: <strong><a href="./proxy.conf.js">proxy.conf.js</a></strong>.</p>
+<p><strong>Obs.:</strong> Não esqueça de modificar o arquivo de configuração do proxy para o servidor da API que for utilizar: <strong><a href="https://github.com/ProjetoIntegradorADSFatec/web-gis/blob/master/proxy.conf.js">proxy.conf.js</a></strong>.</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="c1"># Instalar as dependências</span>
 $ npm install

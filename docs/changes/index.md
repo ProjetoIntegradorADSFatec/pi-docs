@@ -130,19 +130,21 @@ Gestão de Projetos                              |[Matriz das Comunicações](ht
 Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1NLQOZwKOsO3yfVN64Abwb3kCgrOPcAQQ/view?usp=sharing)
 Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITIL](https://drive.google.com/file/d/1J8S-2Pydf_M-l_vKJbBwfAz5fAEyFntD/view?usp=sharing)
 
-## Sprint 5 (2020 - 06 - 26)
+## Sprint 5 (2020 - 06 - 27)
 
-Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC) e a visualização concreta dos Talhões no Web GIS.
+**Entrega da Primeira versão do Catálogo de Imagens**. Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC) e a visualização concreta dos Talhões no Web GIS.
 
 <p align = "center">
-    <iframe width="560" height="315" src="" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/mK4gHb4wKPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 > **Descrição:**
 
+- Nesta Sprint foi entregue a primeira versão completa e revisada do catálogo de imagens seguindo a especificação _STAC_. Para isso realizamos uma revisão dos metadados utilizando os parâmetros, os requisitos e a especificação do [_Spatial Temporal Asset Catalog (STAC)_](https://stacspec.org/) para o armazenamento das imagens no Banco de dados Geográfico PostGIS;
+
 - Realizamos alguns testes envolvendo o modelo criado pelo sistema inteligente com algumas imagens do Sentinel-1 e Landsat para o reconhecimento de propriedades de cobertura de terra;
 
-- Para o catálogo de imagens realizamos uma revisão dos metadados utilizando os parâmetros, os requisitos e a especificação do [_Spatial Temporal Asset Catalog (STAC)_](https://stacspec.org/) para o armazenamento das imagens no Banco de dados Geográfico PostGIS;
+- Para a visualização dos dados gerados acima tanto para o catálogo de imagens quanto para o sistema inteligente, foi realizado uma revisão do Web GIS, para se adaptar aos novos parâmetros estabelecidos pela especificação do _STAC_;
 
 > **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
 
@@ -150,15 +152,20 @@ Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálo
 
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/5?closed=1) - entrega da especificação da API seguindo os parâmetros do _STAC_;
 
+- [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis/milestone/5?closed=1) - integração com a API, implementação da busca por dados espaço temporais para os parâmetros especificados pelo _STAC_;
+
 > **Tabela de entregas:**
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
-                                                |
+Gestão de Equipes                               |[ATA - Reunião PI ADS](https://drive.google.com/file/d/1586os69-zdhupzRomD2C7J6tKgGdq67C/view?usp=sharing)
+Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/1OgQH_H71RbYLBoJrpFnn642_Z9SSmRfj/view?usp=sharing)
+Gestão de Projetos                              |[Plano de Risco](https://drive.google.com/file/d/1U-ydIQFW2ohTsUPV3ZHI2aT8tM0mrk4z/view?usp=sharing)
+Gestão de Projetos                              |[Matriz RACI](https://drive.google.com/file/d/1FN0Md0lnwOFsdWj-2w4latgTUEVtoZnL/view?usp=sharing)
 
 ## Sprint 6 (2020 - 07 - 10)
 
-Testes com a aplicação em funcionamento utilizando servidores em nuvem.
+Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
 
 ## Contato para Dúvidas
 
