@@ -146,7 +146,7 @@ Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITI
 
 - Para a visualização dos dados gerados acima tanto para o catálogo de imagens quanto para o sistema inteligente, foi realizado uma revisão do Web GIS, para se adaptar aos novos parâmetros estabelecidos pela especificação do _STAC_;
 
-> **Links para as milestones e issues relacionadas à quarta entrega (Sprint 4):**
+> **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/4?closed=1) - testes no modelo criado utilizando a base de dados enriquecida da API;
 
