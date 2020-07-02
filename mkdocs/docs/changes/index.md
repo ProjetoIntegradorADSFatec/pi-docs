@@ -1,12 +1,16 @@
 ## Sprint 1 (2020 - 03 - 20)
 
-Nesta sprint a priorização foi a definição da base de dados para a construção da API Restful focando no catálogo de imagem e no armazenamento, além da definição da interface de usuário para o sistema de visualização Web GIS focando no map tile engine e no recorte e download das imagens.
+> **Objetivo:** Entregar o ambiente de desenvolvimento para o sistema completo.
+
+> **Valor:** Estudo das possíveis plataformas de desenvolvimento e validação de qual a mais adequada.
+
+> **Descrição:** Nesta sprint a priorização foi a definição da base de dados para a construção da API Restful focando no catálogo de imagem e no armazenamento, além da definição da interface de usuário para o sistema de visualização Web GIS focando no map tile engine e no recorte e download das imagens.
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rAHZIuZ5mDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-> **Descrição:**
+> **Atividades realizadas:**
 
 - Entrega da definição da base de dados a ser utilizada pelo sistema inteligente como catálogo de imagens;
 
@@ -31,13 +35,17 @@ Empreendedorismo                                |[Canvas](https://drive.google.c
 
 ## Sprint 2 (2020 - 05 - 15)
 
-Para esta sprint propomos o desenvolvimento da configuração inicial do sistema inteligente para a identificação de propriedades nas imagens de cobertura de terra capturadas pelo satélite Sentinel e Landsat priorizando a definição de máscaras.
+> **Objetivo:** Montagem do ambiente de desenvolvimento do Sistema Inteligente.
+
+> **Valor:** Estudo das possíveis metodologias para o processamento das imagens.
+
+> **Descrição:** Para esta sprint propomos o desenvolvimento da configuração inicial do sistema inteligente para a identificação de propriedades nas imagens de cobertura de terra capturadas pelo satélite Sentinel e Landsat priorizando a definição de máscaras.
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/rAHZIuZ5mDY" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-> **Descrição:**
+> **Atividades Realizadas:**
 
 - Entrega da primeira versão do sistema inteligente com a avaliação dos dados e primeiro processamento de imagens com o catálogo de imagens do Sentinel-1;
 
@@ -64,13 +72,17 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 
 ## Sprint 3 (2020 - 05 - 29)
 
-Na sprint 3 com a base de dados definida foi efetuado alguns testes com os modelos do TensorFlow usando um misto de imagens do Sentinel e Landsat para enriquecer os dados de treinamento e validação da IA, também foi desenvolvida na API Restful uma busca com polígonos no banco de dados geográfico e a integração com o Web GIS utilizando dados em mock.
+> **Objetivo:** Integrar as funcionalidades essenciais da busca por imagens.
+
+> **Valor:** Funcionalidade de busca com polígonos em GeoJSON.
+
+> **Descrição:** Na sprint 3 com a base de dados definida foi efetuado alguns testes com os modelos do TensorFlow usando um misto de imagens do Sentinel e Landsat para enriquecer os dados de treinamento e validação da IA, também foi desenvolvida na API Restful uma busca com polígonos no banco de dados geográfico e a integração com o Web GIS utilizando dados em mock.
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/9SIevuyPPh4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-> **Descrição:**
+> **Atividades Realizadas:**
 
 - Criação da base de dados para os os testes envolvendo o modelo criado com o TensorFlow classificador de imagens usando imagens do Sentinel e Landsat;
 
@@ -96,13 +108,17 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 
 ## Sprint 4 (2020 - 06 - 14)
 
-Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint foi proposto a criação e o treinamento do modelo para a identificação de talhões assim como a definição das máscaras para as imagens, a integração da API  Restful com o sistema de visualização Web GIS para o download e recorte das imagens sem mock, além da implementação de tags para os repositórios com controle de versões.
+> **Objetivo:** Implementar a pesquisa por dados espaço-temporais.
+
+> **Valor:** O sistema agora é capaz de realizar buscas por imagens com atributos de espaço (polígonos) e tempo (intervalos de datas).
+
+> **Descrição:** Entrega da API Restful funcionando com dados espaço temporais. Para esta sprint foi proposto a criação e o treinamento do modelo para a identificação de talhões assim como a definição das máscaras para as imagens, a integração da API  Restful com o sistema de visualização Web GIS para o download e recorte das imagens sem mock, além da implementação de tags para os repositórios com controle de versões.
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/bzMIPvj3E0s" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-> **Descrição:**
+> **Atividades Realizados:**
 
 - Implementação do sistema de tags no repositório do Github, da função de busca por dados espaço temporais e enriquecendo a base de dados com mais imagens do Sentinel-1 como teste para o ambiente de produção da API;
 
@@ -132,13 +148,17 @@ Gestão e Governança de Tecnologia da Informação |[Portfólio de Serviço ITI
 
 ## Sprint 5 (2020 - 06 - 27)
 
-**Entrega da Primeira versão do Catálogo de Imagens**. Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC).
+> **Objetivo:** Revisar o catálogo de imagens com a especificação [_Spatial Temporal Asset Catalog (STAC)_](https://stacspec.org/).
+
+> **Valor:** Catálogo de imagens com atributos espaço-temporais e a descrição de cada imagem da base de dados.
+
+> **Descrição: Entrega da Primeira versão do Catálogo de Imagens**. Conforme o planejamento desta sprint a prioridade é o enriquecimento do catálogo de imagens, assim como a base de dados do sistema inteligente e término da primeira versão do Web GIS com a integração da API Restful. Está no planejamento a reformulação da API para os parâmetros utilizados pelo Spatial Temporal Asset Catalog (STAC).
 
 <p align = "center">
     <iframe width="560" height="315" src="https://www.youtube.com/embed/mK4gHb4wKPM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
-> **Descrição:**
+> **Atividades Realizadas:**
 
 - Nesta Sprint foi entregue a primeira versão completa e revisada do catálogo de imagens seguindo a especificação _STAC_. Para isso realizamos uma revisão dos metadados utilizando os parâmetros, os requisitos e a especificação do [_Spatial Temporal Asset Catalog (STAC)_](https://stacspec.org/) para o armazenamento das imagens no Banco de dados Geográfico PostGIS;
 
@@ -165,7 +185,23 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 ## Sprint 6 (2020 - 07 - 10)
 
-Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
+> **Objetivo:** Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
+
+<!-- > **Valor:**
+
+> **Descrição:**
+
+<p align = "center">
+</p>
+
+> **Atividades Realizadas:**
+
+> **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
+
+> **Tabela de entregas:**
+
+Disciplina                                      | Entrega de Documentos
+------------------------------------------------|------------------------------ -->
 
 ## Contato para Dúvidas
 
