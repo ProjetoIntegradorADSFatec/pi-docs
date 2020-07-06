@@ -187,21 +187,26 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 > **Objetivo:** Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
 
-<!-- > **Valor:**
+> **Valor:** Sistema inteligente funcionando com o catálogo de imagens _STAC_ com visualização no Web GIS.
 
-> **Descrição:**
+> **Descrição:** Entrega do sistema inteligente em funcionamento com a integração do catálogo de imagens _STAC_. Em relação à API de busca, foi implementado o controle de usuários utilizando ferramentas para a abstração, em conjunto com o Web GIS (Sistema de visualização) foi implementado o controle e o armazenamento de usuários, foi implementada também uma visualização prévia das imagens para o download.
 
 <p align = "center">
 </p>
 
 > **Atividades Realizadas:**
 
+- Integração do sistema inteligente com o catálogo de imagens, permitindo que o mesmo possa identificar as propriedades de uso de cobertura de terra minerando os dados necessários;
+
 > **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
+
+- [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/5?closed=1) - mineração de dados utilizando a integração com o catálogo de imagens _STAC_;
 
 > **Tabela de entregas:**
 
 Disciplina                                      | Entrega de Documentos
-------------------------------------------------|------------------------------ -->
+------------------------------------------------|------------------------------
+
 
 ## Contato para Dúvidas
 
