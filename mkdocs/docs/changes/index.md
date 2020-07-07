@@ -198,15 +198,19 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 - Integração do sistema inteligente com o catálogo de imagens, permitindo que o mesmo possa identificar as propriedades de uso de cobertura de terra minerando os dados necessários;
 
+- Implementação de controle de usuários utilizando o catálogo de imagens utilizando um gerenciamento de _tokens_ para cada usuário logado no sistema (usuário administrador e comum);
+
 > **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/5?closed=1) - mineração de dados utilizando a integração com o catálogo de imagens _STAC_;
+
+- [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/6?closed=1) - implementação do controle de usuários por meio de _tokens_;
 
 > **Tabela de entregas:**
 
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
-
+Empreendedorismo                                |[Plano de Negócios](https://drive.google.com/file/d/1JNpb47EkkFN24ygU-oqpmvQ9axCLs80y/view?usp=sharing)
 
 ## Contato para Dúvidas
 

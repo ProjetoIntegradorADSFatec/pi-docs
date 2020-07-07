@@ -199,7 +199,7 @@
 
 
 <h2 id="execucao-da-aplicacao-em-micro-servicos">Execução da aplicação em micro serviços<a class="headerlink" href="#execucao-da-aplicacao-em-micro-servicos" title="Permanent link">&para;</a></h2>
-<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/blob/master/src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
+<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="./src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
 <div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
 
@@ -232,12 +232,46 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 </blockquote>
 <h1 id="operacoes">Operações<a class="headerlink" href="#operacoes" title="Permanent link">&para;</a></h1>
 <blockquote>
-<p><strong>Listagem:</strong> lista todas as imagens cadastradas no banco de dados PostgreSQL por método GET:</p>
+<p><strong>Cadastro de usuários:</strong> somente o usuário admin pode adicionar outros usuários, a partir de um método POST:</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code>POST localhost:4040/login
+</code></pre></div>
+
+
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;username&quot;</span> <span class="p">:</span> <span class="s2">&quot;admin&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span> <span class="p">:</span> <span class="s2">&quot;admin&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<div class="codehilite"><pre><span></span><code>POST localhost:4040/users/sign-up
+</code></pre></div>
+
+
+<blockquote>
+<p>Request Body</p>
+</blockquote>
+<div class="codehilite"><pre><span></span><code><span class="p">{</span>
+  <span class="nt">&quot;username&quot;</span> <span class="p">:</span> <span class="s2">&quot;fulano&quot;</span><span class="p">,</span>
+  <span class="nt">&quot;password&quot;</span> <span class="p">:</span> <span class="s2">&quot;123&quot;</span>
+<span class="p">}</span>
+</code></pre></div>
+
+
+<blockquote>
+<p><strong>Listagem:</strong> lista todas as imagens cadastradas no banco de dados PostgreSQL por método GET, onde todos os usuários podem acessar a lista de imagens:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>GET localhost:4040/catalog/list
 </code></pre></div>
 
 
+<blockquote>
+<p>Response</p>
+</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
   <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
     <span class="p">{</span>
@@ -289,12 +323,15 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <blockquote>
-<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST:</p>
+<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST, onde somente o usuário administrador pode adicionar imagens:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/add
 </code></pre></div>
 
 
+<blockquote>
+<p>Request Body</p>
+</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;name&quot;</span><span class="p">:</span> <span class="s2">&quot;clip_20170612T083546_Sigma0_VH_db&quot;</span><span class="p">,</span>
     <span class="nt">&quot;description&quot;</span><span class="p">:</span> <span class="s2">&quot;sentinel A image clip_Sigma0_VH_db.tif INPE&quot;</span><span class="p">,</span>
@@ -318,12 +355,15 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <blockquote>
-<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST:</p>
+<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST, todos os usuários podem realizar pesquisas:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/search
 </code></pre></div>
 
 
+<blockquote>
+<p>Request Body</p>
+</blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
     <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;FeatureCollection&quot;</span><span class="p">,</span>
     <span class="nt">&quot;features&quot;</span><span class="p">:</span> <span class="p">[</span>
