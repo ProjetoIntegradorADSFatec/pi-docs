@@ -183,6 +183,7 @@ Gestão de Equipes                               |[Gráfico de Burndown](https:/
 Gestão de Projetos                              |[Plano de Risco](https://drive.google.com/file/d/1U-ydIQFW2ohTsUPV3ZHI2aT8tM0mrk4z/view?usp=sharing)
 Gestão de Projetos                              |[Matriz RACI](https://drive.google.com/file/d/1FN0Md0lnwOFsdWj-2w4latgTUEVtoZnL/view?usp=sharing)
 
+
 ## Sprint 6 (2020 - 07 - 10)
 
 > **Objetivo:** Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
