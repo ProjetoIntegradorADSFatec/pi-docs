@@ -211,6 +211,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
 Empreendedorismo                                |[Plano de Negócios](https://drive.google.com/file/d/1JNpb47EkkFN24ygU-oqpmvQ9axCLs80y/view?usp=sharing)
+Gestão de Projetos                              |[Canvas Projeto Integrador](https://drive.google.com/file/d/13_HHnPjk8uem3n8G-QAuMjYltelWRm5G/view?usp=sharing)
 
 ## Contato para Dúvidas
 
