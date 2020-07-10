@@ -189,7 +189,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 > **Valor:** Sistema inteligente funcionando com o catálogo de imagens _STAC_ com visualização no Web GIS.
 
-> **Descrição:** Entrega do sistema inteligente em funcionamento com a integração do catálogo de imagens _STAC_. Em relação à API de busca, foi implementado o controle de usuários utilizando ferramentas para a abstração, em conjunto com o Web GIS (Sistema de visualização) foi implementado o controle e o armazenamento de usuários, foi implementada também uma visualização prévia das imagens para o download.
+> **Descrição:** Entrega do sistema inteligente em funcionamento com a integração do catálogo de imagens _STAC_. Em relação à API de busca, foi implementado o controle de usuários utilizando ferramentas para a abstração, em conjunto com o Web GIS (Sistema de visualização) foi implementado o controle e o armazenamento de usuários no sistema de _caching_. Foi implementado também uma visualização prévia das imagens para o download.
 
 <p align = "center">
 </p>
@@ -200,11 +200,15 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 - Implementação de controle de usuários utilizando o catálogo de imagens utilizando um gerenciamento de _tokens_ para cada usuário logado no sistema (usuário administrador e comum);
 
+- Foi feita uma revisão dos métodos para o download das imagens e a visualização prévia, foi implementado tratamento de erros e rotas para o controle de usuários dentro da aplicação, além da implementação de um sistema de _caching_;
+
 > **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/5?closed=1) - mineração de dados utilizando a integração com o catálogo de imagens _STAC_;
 
 - [API Resful](https://github.com/ProjetoIntegradorADSFatec/api-restful/milestone/6?closed=1) - implementação do controle de usuários por meio de _tokens_;
+
+- [Sistema Web GIS](https://github.com/ProjetoIntegradorADSFatec/web-gis/milestone/6?closed=1) - integração com a API para o controle de usuários, tratamento de rotas e armazenamento temporário em cache;
 
 > **Tabela de entregas:**
 
@@ -212,6 +216,7 @@ Disciplina                                      | Entrega de Documentos
 ------------------------------------------------|------------------------------
 Empreendedorismo                                |[Plano de Negócios](https://drive.google.com/file/d/1JNpb47EkkFN24ygU-oqpmvQ9axCLs80y/view?usp=sharing)
 Gestão de Projetos                              |[Canvas Projeto Integrador](https://drive.google.com/file/d/13_HHnPjk8uem3n8G-QAuMjYltelWRm5G/view?usp=sharing)
+Gestão de Equipes                               |[Gráfico de Burndown](https://drive.google.com/file/d/17pdxIeohbqx0q4ijvyDzpQKlx_UMCiM2/view?usp=sharing)
 
 ## Contato para Dúvidas
 
