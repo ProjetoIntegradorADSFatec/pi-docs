@@ -192,6 +192,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 > **Descrição:** Entrega do sistema inteligente em funcionamento com a integração do catálogo de imagens _STAC_. Em relação à API de busca, foi implementado o controle de usuários utilizando ferramentas para a abstração, em conjunto com o Web GIS (Sistema de visualização) foi implementado o controle e o armazenamento de usuários no sistema de _caching_. Foi implementado também uma visualização prévia das imagens para o download.
 
 <p align = "center">
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/3h4BdBrrvpM" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 </p>
 
 > **Atividades Realizadas:**
