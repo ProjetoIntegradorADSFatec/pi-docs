@@ -185,7 +185,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 ## Sprint 6 (2020 - 07 - 10)
 
-> **Objetivo:** Testes com a aplicação em funcionamento utilizando servidores em nuvem, priorização do funcionamento do sistema inteligente.
+> **Objetivo:** Priorização do funcionamento do sistema inteligente para a visualização de talhões.
 
 > **Valor:** Sistema inteligente funcionando com o catálogo de imagens _STAC_ com visualização no Web GIS.
 
