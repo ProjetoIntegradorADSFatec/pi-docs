@@ -203,7 +203,7 @@ Gestão de Projetos                              |[Matriz RACI](https://drive.go
 
 - Foi feita uma revisão dos métodos para o download das imagens e a visualização prévia, foi implementado tratamento de erros e rotas para o controle de usuários dentro da aplicação, além da implementação de um sistema de _caching_;
 
-> **Links para as milestones e issues relacionadas à quinta entrega (Sprint 5):**
+> **Links para as milestones e issues relacionadas à sexta entrega (Sprint 6):**
 
 - [Sistema Inteligente](https://github.com/ProjetoIntegradorADSFatec/python-cnn/milestone/5?closed=1) - mineração de dados utilizando a integração com o catálogo de imagens _STAC_;
 
