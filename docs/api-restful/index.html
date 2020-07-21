@@ -256,8 +256,11 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 <p>Request Body</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code><span class="p">{</span>
-  <span class="nt">&quot;username&quot;</span> <span class="p">:</span> <span class="s2">&quot;fulano&quot;</span><span class="p">,</span>
-  <span class="nt">&quot;password&quot;</span> <span class="p">:</span> <span class="s2">&quot;123&quot;</span>
+    <span class="nt">&quot;username&quot;</span><span class="p">:</span> <span class="s2">&quot;fulano&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;password&quot;</span><span class="p">:</span> <span class="s2">&quot;123&quot;</span><span class="p">,</span>
+    <span class="nt">&quot;authorizations&quot;</span><span class="p">:</span> <span class="p">[</span>
+        <span class="p">{</span> <span class="nt">&quot;type&quot;</span><span class="p">:</span> <span class="s2">&quot;ROLE_USER&quot;</span> <span class="p">}</span>
+    <span class="p">]</span>
 <span class="p">}</span>
 </code></pre></div>
 
