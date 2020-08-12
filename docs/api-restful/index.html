@@ -199,7 +199,7 @@
 
 
 <h2 id="execucao-da-aplicacao-em-micro-servicos">Execução da aplicação em micro serviços<a class="headerlink" href="#execucao-da-aplicacao-em-micro-servicos" title="Permanent link">&para;</a></h2>
-<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="./src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
+<p><strong>Obs.:</strong> Não esqueça de mudar o endereço <em><code>IP (localhost)</code></em> do banco de dados no arquivo <em><a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/blob/master/src/main/resources/application.properties"><code>application.properties</code></a></em> para o endereço real do servidor PostgreSQL do seu computador.</p>
 <div class="codehilite"><pre><span></span><code>## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
 
@@ -326,7 +326,7 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <blockquote>
-<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="./docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST, onde somente o usuário administrador pode adicionar imagens:</p>
+<p><strong>Cadastro de imagens:</strong> cadastra uma imagem com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> no banco de dados PostgreSQL por método POST, onde somente o usuário administrador pode adicionar imagens:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/add
 </code></pre></div>
@@ -358,7 +358,7 @@ CONTAINER ID        IMAGE                  COMMAND                  CREATED     
 
 
 <blockquote>
-<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="./docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST, todos os usuários podem realizar pesquisas:</p>
+<p><strong>Busca de imagens:</strong> busca imagens a partir de uma dado polígono formatado em <a href="https://geojson.org/">GeoJSON</a> com os atributos definidos nos <a href="https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples">exemplos</a> em projeção <strong>EPSG:4326</strong> com banco de dados PostgreSQL por método POST, todos os usuários podem realizar pesquisas:</p>
 </blockquote>
 <div class="codehilite"><pre><span></span><code>POST localhost:4040/catalog/search
 </code></pre></div>

@@ -57,7 +57,7 @@ $ gradle bootRun
 ```
 
 ## Execução da aplicação em micro serviços
-**Obs.:** Não esqueça de mudar o endereço *`IP (localhost)`* do banco de dados no arquivo *[`application.properties`](./src/main/resources/application.properties)* para o endereço real do servidor PostgreSQL do seu computador.
+**Obs.:** Não esqueça de mudar o endereço *`IP (localhost)`* do banco de dados no arquivo *[`application.properties`](https://github.com/ProjetoIntegradorADSFatec/api-restful/blob/master/src/main/resources/application.properties)* para o endereço real do servidor PostgreSQL do seu computador.
 ```
 ## Gerar o arquivo executável `.jar` utilizando o Gradle 5
 $ gradle build
@@ -176,7 +176,7 @@ GET localhost:4040/catalog/list
 }
 ~~~
 
-> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](./docs/examples) no banco de dados PostgreSQL por método POST, onde somente o usuário administrador pode adicionar imagens:
+> **Cadastro de imagens:** cadastra uma imagem com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) no banco de dados PostgreSQL por método POST, onde somente o usuário administrador pode adicionar imagens:
 
 ```
 POST localhost:4040/catalog/add
@@ -206,7 +206,7 @@ POST localhost:4040/catalog/add
 }
 ~~~
 
-> **Busca de imagens:** busca imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/) com os atributos definidos nos [exemplos](./docs/examples) em projeção **EPSG:4326** com banco de dados PostgreSQL por método POST, todos os usuários podem realizar pesquisas:
+> **Busca de imagens:** busca imagens a partir de uma dado polígono formatado em [GeoJSON](https://geojson.org/) com os atributos definidos nos [exemplos](https://github.com/ProjetoIntegradorADSFatec/api-restful/tree/master/docs/examples) em projeção **EPSG:4326** com banco de dados PostgreSQL por método POST, todos os usuários podem realizar pesquisas:
 
 ```
 POST localhost:4040/catalog/search
